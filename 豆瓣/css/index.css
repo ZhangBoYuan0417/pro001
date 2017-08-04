@@ -1,0 +1,390 @@
+/*特有样式*/
+/*banner 开始*/
+#banner{
+    height:178px;
+    background: #edf4ed;
+}
+#banner .wrap{
+    height:100%;
+    background-image: url("../img/doubanapp5.png") ,url("../img/doubanapp5_bg.png");
+    background-repeat:no-repeat;
+    background-position: 50px -100px,0 0;
+    overflow: hidden;
+}
+#banner .app{
+    margin-left:500px;
+    margin-top: 20px;
+}
+#banner .btn-download{
+    display: inline-block;
+    width:142px;
+    height: 30px;
+    background: #00B51D;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    line-height:30px;
+    border-radius: 5px;
+}
+#banner img{
+    width:28px;
+    height:28px;
+    vertical-align: middle;
+}
+#banner .app h1{
+    font-size: 25px;
+    color: #111;
+   margin: 7px auto;
+}
+#banner .app p{
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #111;
+    margin: 15px auto;
+}
+#banner .login-form{
+    width:272px;
+    position: absolute;
+    right:0;
+    top: 32px;
+}
+#banner .login-form p{
+    height: 32px;
+    margin: 5px auto;
+
+}
+#banner .email,#banner .password{
+    height:32px;
+    width:100%;
+    line-height: 32px;
+    text-indent: 7px;
+    border:0;
+}
+#banner .password{
+    width: 236px;
+}
+#banner .login-form .abc{
+    border:1px solid  #DBE5DB;
+    background: #ffffff;
+}
+#banner .btn{
+    width: 132px;
+    border: 0;
+    color: #fff;
+    padding: 7px 0;
+    border-radius: 2px;
+    cursor: pointer;
+}
+#banner .submit{
+    background: #30A080;
+    border: #30A080;
+}
+#banner .button{
+    color: #30A080;
+    border: 1px solid #30A080;
+    background: #DBE5DB;
+}
+.btn:hover{
+    opacity: 0.8;
+    filter: alpha(opacity:80);
+}
+#banner .other-login li{
+    float: left;
+    margin: 2px;
+}
+#banner .other-login{
+    float: right;;
+}
+#banner .other-login img{
+    width: 14px;
+    height:12px;
+}
+/*banner 结束*/
+/*advertisement 开始*/
+#advertisement .word{
+    position: absolute;
+    right:0;
+    bottom: 2px;
+    background-color: #000;
+    color: #ffffff;
+    opacity: 0.3;
+    font-size: 12px;
+    padding: 5px;
+}
+/*advertisement 结束*/
+/*hot 开始*/
+#hot{
+    margin:10px;
+    height: 470px;
+}
+#hot .wrap{
+    height:100%;
+}
+#hot .word h2,#hot .word span{
+    display: inline-block;
+    float: left;
+    font: 15px Arial, Helvetica, sans-serif;
+    color: #072;
+    margin: 0 0 12px 0;
+    line-height: 150%;
+}
+#hot .word a:link{
+    color: #37a;
+}
+#hot .word a:visited{
+    color: #669;
+}
+#hot .pictures{
+    position: absolute;
+    left:0;
+    top: 30px;
+    height: 360px;
+    width:417px;
+}
+#hot .section{
+    float: left;
+    width: 170px;
+    margin: 5px;
+}
+#hot .hot-word{
+    position: absolute;
+    right:300px;
+    width:290px;
+    height: 360px;
+}
+#hot .hot-word li{
+    margin: 15px 0;
+
+}
+#hot .hot-word li a:link{
+    color: #37a;
+}
+#hot .hot-word li a:visited{
+    color: #669;
+}
+#hot .hot-word .first .p1 {
+    color: #999;
+}
+#hot .hot-word .first .p2 {
+    color:  #666;
+}
+#hot .other{
+    width: 250px;
+    float: right;
+    position: relative;;
+}
+#hot .other img{
+    width:250px;
+    height:125px;
+}
+#hot .other .qwe{
+    height:30px;
+}
+#hot .other h2,#hot .other span{
+    float: left;
+}
+#hot .other h2{
+    font: 15px Arial, Helvetica, sans-serif;
+    color: #072;
+    margin: 0 0 12px 0;
+    line-height: 150%;
+}
+#hot .other span:link{
+    color: #37a;
+}
+#hot .other span:visited{
+    color: #669;
+}
+#hot .other .artical{
+    position: absolute;
+    left:0;
+}
+#hot .other .artical li{
+    margin: 15px;
+}
+#hot .other .artical li a:link{
+    color: #37a;
+}
+#hot .other .artical li a:visited{
+    color: #669;
+}
+/*hot 结束*/
+/*dbtime 开始*/
+#dbtime{
+    height:614px;
+    margin-top: 50px;
+    background: #f7f7f7;
+}
+#dbtime .time a{
+    color: #494949;
+    font-size: 24px;
+}
+#dbtime .word{
+    position: absolute;
+    left: 120px;
+    top: 10px;
+    height: 614px;
+}
+#dbtime .word h2,#dbtime .word span {
+    float: left;
+}
+#dbtime .time,#dbtime .word{
+    float: left;
+}
+#dbtime .word span a:link{
+    color: #37a;
+}
+#dbtime .word span a:visited {
+    color: #669;
+}
+#dbtime .word h2{
+    font: 15px Arial, Helvetica, sans-serif;
+    color: #072;
+    margin: 0 0 12px 0;
+    line-height: 150%;
+}
+#dbtime .word .db-pictures{
+    display: inline-block;
+    width: 800px;
+    text-align: center;
+}
+#dbtime .word .db-pictures img{
+    width:100px;
+    height:141px;
+}
+#dbtime .word .db-pictures li{
+    width: 100px;
+    float: left;
+    margin: 30px 60px 30px 0;
+    padding:0;
+
+
+}
+#dbtime .word .db-pictures .aaa{
+    color: #999999;
+    line-height: 1;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+}
+#dbtime .word .db-pictures a{
+    color: #333333;
+    font-size: 13px;
+    line-height: 1.38;
+}
+/*dbtime 结束*/
+/*video 开始*/
+#video {
+    height:501px;
+    margin-top: 50px;
+}
+#video .rushi{
+    position: relative;
+}
+#video .video-title,#video .video-rushi{
+    float: left;
+
+}
+#video .video-title a{
+    display: inline-block;
+    height: 200px;
+    width: 120px;
+    color: #494949;
+    font-size: 24px;
+}
+#video .video-rushi h2{
+    width: 830px;
+    height: 22px;
+    font: 15px Arial, Helvetica, sans-serif;
+    color: #072;
+    margin: 0 0 28px 0;
+    line-height:200%;
+}
+#video .video-rushi li{
+    float: left;
+    width: 250px;
+    margin-bottom: 10px;
+    margin-right: 25px;
+}
+#video  li img{
+    width: 250px;
+    height: 140px;
+    margin-bottom: 10px;
+}
+#video .video-rushi li a{
+    font-size: 13px;
+    line-height: 1.54;
+    color: #494949
+}
+#video .video-rushi li a:visited{
+    color: #669;
+}
+#video .video-rushi .shenzui{
+    position: absolute;
+    bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*video 结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
