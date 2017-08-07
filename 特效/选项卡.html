@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #container{
+            width: 600px;
+            height: 300px;
+            background: #c3c3c3;
+        }
+        li{
+            list-style:none;
+        }
+        #tabs li{
+            width: 170px;
+            float: left;
+            margin-right: 10px;
+            border:solid 1px #000000;
+            text-align: center;
+            background: #c3c3c3;
+        }
+       #tabs  .selected{
+           background: #000;
+           color: #ffffff;
+       }
+        #words >div{
+            width: 600px;
+            height: 200px;
+            display: block;
+            float: left;
+            margin-top: 10px;
+            display: none;
+
+        }
+        #words .selected{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <ul id="tabs">
+        <li class="selected">html</li>
+        <li>css</li>
+        <li>js</li>
+    </ul>
+
+<div id="content">
+    <div id="words">
+        <div class="selected">html...</div>
+        <div>css...</div>
+        <div>js...</div>
+    </div>
+</div>
+</div>
+<script>
+    var otabs =document.getElementById('tabs');
+    var owords = document.getElementById('words');
+    var oli = document.getElementsByTagName('li');
+    var odiv= owords.children;
+    for (var i=0;i<oli.length;i++){
+        oli[i].index=i;
+        oli[i].onclick=function () {
+        for (var i=0;i<oli.length;i++) {
+            oli[i].className = '';
+            odiv[i].className='';
+        }
+        this.className='selected';
+        odiv[this.index].className='selected';
+    };}
+
+</script>
+</body>
+</html>
