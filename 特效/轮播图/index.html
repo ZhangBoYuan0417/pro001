@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #container {
+            width: 680px;
+            height: 344px;
+            margin: 10px auto;
+            position: relative;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #imgs img {
+            display: none;
+        }
+
+        #numbers {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        #arrow {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+        }
+
+        #numbers li, #arrow span {
+            width: 20px;
+            height: 20px;
+            background: #000;
+            color: #ffffff;
+            float: left;
+            margin-right: 5px;
+            text-align: center;;
+        }
+
+        #imgs .selected {
+            display: block;
+        }
+
+        #numbers .selected {
+            background: orange;
+
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="imgs">
+        <img src="img/1.jpg" alt="" class="selected">
+        <img src="img/2.jpg" alt="">
+        <img src="img/3.jpg" alt="">
+        <img src="img/4.jpg" alt="">
+    </div>
+    <ul id="numbers">
+        <li class="selected">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <div id="arrow">
+        <span id="prev">&lt;</span>
+        <span id="next">&gt;</span>
+    </div>
+</div>
+<script>
+    var oContainer=document.getElementById('container');
+    var oNumbers = document.getElementById('numbers');
+    var ali = oNumbers.getElementsByTagName('li');
+    var oImgs = document.getElementById('imgs');
+    var aimgs = oImgs.getElementsByTagName('img');
+    var aPrev = document.getElementById('prev');
+    var aNext = document.getElementById('next');
+    var nowindex = 0;
+    var timer;
+
+
+    for (var i = 0; i < ali.length; i++) {
+        ali[i].index = i;
+        ali[i].onmouseover = function () {
+            nowindex= this.index;
+            changeImg() ;
+
+    }}
+    aPrev.onclick = aNext.onclick = function () {
+        if (this == aPrev) {
+            nowindex--;
+            if (nowindex == -1) {
+                nowindex = 3;
+            }
+        }
+        if (this == aNext) {
+            nowindex++;
+            if (nowindex == ali.length) {
+                nowindex = 0;
+            }
+        }
+        for (var i = 0; i < ali.length; i++) {
+            ali[i].className = '';
+            aimgs[i].className = '';
+        }
+        ali[nowindex].className = 'selected';
+        aimgs[nowindex].className = 'selected';
+    };
+    aPrev.onselectstart = aNext.onselectstart = function(){
+        return false;
+    };
+    function changeImg() {
+        for (var i = 0; i < ali.length; i++) {
+            ali[i].className = '';
+            aimgs[i].className = '';
+        }
+        ali[nowindex].className = 'selected';
+        aimgs[nowindex].className = 'selected';
+    }
+   function play() {
+       timer= setInterval(function () {
+           aNext.onclick();
+       },1000)
+   }
+    oContainer.onmouseover=function () {
+        clearInterval(timer);
+    };
+    oContainer.onmouseout=function () {
+        play();
+    };
+    play();
+</script>
+</body>
+</html>
