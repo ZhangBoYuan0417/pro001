@@ -12,13 +12,13 @@
 <body>
 <div id="container">
     <div id="input">
-        名称 <input type="text">
+        名称 <input type="text" value="张三">
     </div>
     <div id="passwords">
-        密码 <input type="password">
+        密码 <input type="password" value="213">
     </div>
     <div id="msg">
-        详细信息 <input type="text">
+        详细信息 <input type="text" value="123">
     </div>
 
 
@@ -33,9 +33,12 @@
 <script>
     $(function () {
         var $inputs = $('#container input')
-        $inputs.focus(function () {
-            $inputs.css('background','#fff');
-            $(this).css('background', 'green');
+        $inputs.on("focus", function () {
+            $(this).css('background', 'green').css('color','#fff');
+            $(this).val('');
+        });
+        $inputs.on('blur',function () {
+           $(this).css('background','#fff').css('color','#000').val(this.value==''?this.defaultValue:this.value)
         });
 
 
