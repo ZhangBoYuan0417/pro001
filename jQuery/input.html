@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text"id="search">
+<ul id="result">
+    <li>asdfg</li>
+    <li>asdfghjkl</li>
+    <li>qwerty</li>
+    <li>qwertyuio</li>
+    <li>zxcvbnm</li>
+    <li>zxcvb</li>
+    <li>fsffregr</li>
+    <li>wefwefw</li>
+    <li>adwadawd</li>
+    <li>adwvfewffqaf</li>
+</ul>
+<script src="jquery-1.12.4.js">  </script>
+<script>
+    $(function () {
+        $("#search").on("keyup", function(e){
+//                console.log($(this).val());
+            $("#result li").css("background", "transparent");
+            if($(this).val() != ""){
+                $("#result li:contains(" + $(this).val().toLowerCase()+ ")").css("background", "#f00");
+            }
+        });
+    });
+</script>
+</body>
+</html>
