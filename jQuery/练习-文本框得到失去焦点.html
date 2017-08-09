@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="input">
+        名称 <input type="text">
+    </div>
+    <div id="passwords">
+        密码 <input type="password">
+    </div>
+    <div id="msg">
+        详细信息 <input type="text">
+    </div>
+
+
+</div>
+<script src="jquery-1.12.4.js"></script>
+<!--文本框得到/失去焦点练习，完成文本框得到/失去焦点时动态变换文本框样式功能。-->
+<!--/*-->
+<!--文本框得到/失去焦点练习，功能：-->
+<!--1.文本框得到/失去焦点时动态变换文本框样式-->
+<!--2.文本框得到时，清除文本框默认值；失去焦点时，如果文本框值未改变，恢复默认值，否则使用修改值-->
+<!--*/-->
+<script>
+    $(function () {
+        var $inputs = $('#container input')
+        $inputs.focus(function () {
+            $inputs.css('background','#fff');
+            $(this).css('background', 'green');
+        });
+
+
+
+
+
+
+    });
+</script>
+</body>
+</html>
