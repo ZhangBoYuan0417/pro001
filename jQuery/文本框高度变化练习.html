@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        button {
+            width: 100px;
+            height: 20px;
+        }
+
+        #text {
+            width: 500px;
+            height: 150px;
+            border: 1px solid;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <button id="big">BeBigger</button>
+    <button id="small">BeSmaller</button>
+    <div id="text">abcdefghijklmnopqrstuvwxyz</div>
+    <!--/*-->
+    <!--文本框高度变化练习，功能：-->
+    <!--1.完成点击放大按钮，文本域高度每次加50像素，直到500像素为止-->
+    <!--2.完成点击缩小按钮，文本框高度每次减少50像素，直到50像素为止-->
+    <!--*/--></div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        $('#big').on('click', function () {
+            $("#text").animate({
+            height:$('#text').height() < 500 ? $('#text').height() + 50 : $('#text').height()
+
+        },400);
+        });
+        $('#small').on('click', function () {
+            $("#text").animate({
+                height:$('#text').height() >50 ? $('#text').height() - 50 : $('#text').height()
+
+            },400);
+        });
+
+//        3.除了基本的放大与缩小效果外，还要加入缓冲动画效果，要求在0.4秒内完成动画效果
+
+
+    });
+</script>
+
+</body>
+</html>
