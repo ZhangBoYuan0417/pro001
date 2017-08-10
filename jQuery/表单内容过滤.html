@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        .selected {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <input type="text" id="search">
+    <table >
+
+        <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>sex</th>
+        </tr>
+
+        <tbody id="tr">
+        <tr>
+            <td>zhangyi</td>
+            <td>35</td>
+            <td>nan</td>
+        </tr>
+        <tr>
+            <td>zhanger</td>
+            <td>56</td>
+            <td>nan</td>
+        </tr>
+        <tr>
+            <td>zhangsan</td>
+            <td>34</td>
+            <td>nv</td>
+        </tr>
+        <tr>
+            <td>wangyi</td>
+            <td>45</td>
+            <td>nan</td>
+        </tr>
+        <tr>
+            <td>wanger</td>
+            <td>66</td>
+            <td>nv</td>
+        </tr>
+        <tr>
+            <td>wangsan</td>
+            <td>44</td>
+            <td>nv</td>
+        </tr>
+        <tr>
+            <td>zhaoyi</td>
+            <td>63</td>
+            <td>nv</td>
+        </tr>
+        <tr>
+            <td>zhaoer</td>
+            <td>28</td>
+            <td>nan</td>
+        </tr>
+        <tr>
+            <td>zhaosan</td>
+            <td>34</td>
+            <td>nv</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        $("#search").on("keyup", function(e){
+            $("#tr tr ").css("display", "none");
+            if($(this).val() != ""){
+                $("#tr tr:contains(" + $(this).val() + ")").css("display", "block");
+            }
+            else{
+                $("#tr tr ").css("display", "block");
+            }
+        });
+    });
+</script>
+</body>
+</html>
