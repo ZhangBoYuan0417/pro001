@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #table {
+            border: 1px solid;
+        }
+
+        .selected {
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <table id="table">
+        <tr>
+            <th></th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+        </tr>
+        <tr>
+            <td><input type="radio" name="checked"></td>
+            <td>zhangsan</td>
+            <td>20</td>
+            <td>nan</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="checked" class="input"></td>
+            <td>lisi</td>
+            <td>27</td>
+            <td>nan</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="checked" class="input"></td>
+            <td>wangwu</td>
+            <td>23</td>
+            <td>nv</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="checked" class="input"></td>
+            <td>zhaoliu</td>
+            <td>23</td>
+            <td>nv</td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="checked" class="input"></td>
+            <td>hanmeimei</td>
+            <td>22</td>
+            <td>nv</td>
+        </tr>
+    </table>
+</div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        $('tr').on('click', function () {
+            $(this).siblings().removeClass('selected').find(':radio').prop('checked',false);
+            $(this).addClass('selected').find(':radio').prop('checked',true);
+
+        })
+    });
+</script>
+</body>
+</html>
