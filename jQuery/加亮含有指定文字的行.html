@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #table {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <table id="table">
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+        </tr>
+        <tr>
+            <td>zhangsan</td>
+            <td>20</td>
+            <td>nan</td>
+        </tr>
+        <tr>
+            <td>lisi</td>
+            <td>27</td>
+            <td>nan</td>
+        </tr>
+        <tr>
+            <td>wangwu</td>
+            <td>23</td>
+            <td>nv</td>
+        </tr>
+        <tr>
+            <td>zhaoliu</td>
+            <td>23</td>
+            <td>nv</td>
+        </tr>
+        <tr>
+            <td>hanmeimei</td>
+            <td>22</td>
+            <td>nv</td>
+        </tr>
+    </table>
+</div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        $('tr:contains("lisi")').css('background','yellow')
+    });
+</script>
+</body>
+</html>
