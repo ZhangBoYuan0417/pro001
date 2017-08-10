@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        th {
+            border-bottom: solid;
+        }
+
+        .number {
+            background: orange;
+            text-align: center;
+        }
+
+        .selected {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <table>
+        <thead>
+        <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>sex</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="number">
+            <td colspan="3">NO.1</td>
+        </tr>
+        <tr>
+            <td>zhangyi</td>
+            <td>35</td>
+            <td>nan</td>
+        </tr>
+        <tr>
+            <td>zhanger</td>
+            <td>56</td>
+            <td>nan</td>
+        </tr>
+        <tr>
+            <td>zhangsan</td>
+            <td>34</td>
+            <td>nv</td>
+        </tr>
+        <tr class="number">
+            <td colspan="3">NO.2</td>
+        </tr>
+        <tr>
+            <td>wangyi</td>
+            <td>45</td>
+            <td>nan</td>
+        </tr>
+        <tr>
+            <td>wanger</td>
+            <td>66</td>
+            <td>nv</td>
+        </tr>
+        <tr>
+            <td>wangsan</td>
+            <td>44</td>
+            <td>nv</td>
+        </tr>
+        <tr class="number">
+            <td colspan="3">NO.3</td>
+        </tr>
+        <tr>
+            <td>zhaoyi</td>
+            <td>63</td>
+            <td>nv</td>
+        </tr>
+        <tr>
+            <td>zhaoer</td>
+            <td>28</td>
+            <td>nan</td>
+        </tr>
+        <tr>
+            <td>zhaosan</td>
+            <td>34</td>
+            <td>nv</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+
+        $('.number').on('click', function () {
+            var $tr = $(this).nextUntil('.number', 'tr')
+            $tr.hasClass('selected') ?$tr.removeClass('selected') : $tr.addClass('selected')
+        });
+    });
+</script>
+</body>
+</html>
