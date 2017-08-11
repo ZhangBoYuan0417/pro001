@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+    类：人类   具有相同属性和方法的对象的集合  属性定义在构造函数里  方法定义在原型（prototype）里
+    对象：张三
+
+
+    原型链
+
+-->
+<!--Class People(name){
+    this.name = name;
+}
+People zhangsan = new People();-->
+<script>
+    /*var obj1 = new Object();
+     obj1.name = "zhangsan";
+     obj1.eat = function(){
+     alert("eating");
+     };
+
+     var obj2 = {
+     name : "lisi",
+     age : 20,
+     code : function(){
+     alert("coding");
+     }
+     };*/
+
+    //        var str = new String("abc");
+    /*var aa = function(){
+     alert(123);
+     };*/
+    /*var aa = new Function("alert(123);");
+     aa();*/
+
+
+    //People：类
+    function People(name, age){//构造函数
+        this.name = name;
+        this.age = age;
+        /*this.showName = function(){
+         alert("1:" + this.name);
+         };*/
+        /*this.showAge = function(){
+         alert(this.age);
+         };*/
+    }
+    //prototype原型
+    People.prototype.showName = function(){
+        alert("2:" + this.name);
+    };
+
+
+    //p1\p2： 对象
+    var p1 = new People("zhangsan", 18);
+    console.log(p1.name);
+    p1.showName();
+
+    var p2 = new People("lisi", 20);
+    console.log(p2.name);
+    p2.showName();
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
