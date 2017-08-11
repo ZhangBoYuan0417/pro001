@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div1">div1</div>
+<div class="aa">div2</div>
+<div class="aa">div3</div>
+
+<script>
+    $(function () {
+        /*$("#div1").on("click", function(){
+         alert(123);
+         });
+         $(".aa").on("click", function(){
+         alert(123);
+         });*/
+        /*$("#div1").css("background", "red");
+         $(".aa").css({
+         background:  "red",
+         color : "#fff"
+         });*/
+        $(".aa").css("background", function () {
+            return "#f00";
+        }).on("click", function(){
+            alert(123);
+        }).css("border", "10px solid #000");
+    });
+
+    function $(selector, context) {
+        return new JQuery(selector, context);
+    }
+
+    function JQuery(selector, context) {
+        this.elements = [];
+        if (typeof selector == "string") {
+            if (selector.charAt(0) == "#") {
+                this.elements.push(document.getElementById(selector.substring(1)));
+            } else if (selector.charAt(0) == ".") {
+                this.elements = getByClass(selector.substring(1), context);
+            }
+        } else if (typeof selector == "function") {
+            addEvent(window, "load", selector);
+        }
+    }
+    JQuery.prototype.on = function (type, handler) {
+        for (var i = 0; i < this.elements.length; i++) {
+            addEvent(this.elements[i], type, handler);
+        }
+        return this;
+    };
+    JQuery.prototype.css = function (arg1, arg2) {
+        if (typeof arg1 == "string" && typeof arg2 == "string") {
+            for (var i = 0; i < this.elements.length; i++) {
+                this.elements[i].style[arg1] = arg2;
+            }
+        } else if (typeof arg1 == "object" && arg2 == undefined) {
+            for (var p in arg1) {
+                for (var i = 0; i < this.elements.length; i++) {
+                    this.elements[i].style[p] = arg1[p];
+                }
+            }
+        } else if (typeof arg1 == "string" && typeof arg2 == "function") {
+            for (var i = 0; i < this.elements.length; i++) {
+                this.elements[i].style[arg1] = arg2();
+            }
+        }
+        return this;
+    };
+
+
+    /**
+     * 用来根据class查找元素
+     * @param className 要查找的class名称
+     * @param context 要搜索的范围
+     * @return {Array}
+     */
+    function getByClass(className, context) {
+        context = context || document;
+        if (context.getElementsByClassName) {
+            return context.getElementsByClassName(className);
+        } else {
+            var result = [];
+            var arr = context.getElementsByTagName('*');
+            for (var i = 0; i < arr.length; i++) {
+                //arr[i].className = "aa bb"
+                if (arr[i].className.indexOf(className) != -1) {
+                    result.push(arr[i]);
+                }
+            }
+            return result;
+        }
+    }
+
+    /*
+     * elem:绑定事件的对象
+     * type:绑定事件的类型
+     * handler:事件的处理方法
+     * */
+    function addEvent(elem, type, handler) {
+        if (elem.addEventListener) {
+            elem.addEventListener(type, handler);
+        } else if (elem.attachEvent) {
+            elem.attachEvent("on" + type, handler);
+        } else {
+            elem["on" + type] = handler;
+        }
+    }
+
+</script>
+</body>
+</html>
