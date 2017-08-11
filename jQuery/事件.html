@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 400px;
+            height: 400px;
+            background: #ff0000;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background: #00ff00;
+        }
+    </style>
+</head>
+<body>
+
+<div id="div1">
+    <div id="div2"></div>
+</div>
+
+<ul id="ul1">
+    <li>001</li>
+    <li>002</li>
+    <li>003</li>
+    <li>004</li>
+</ul>
+
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function(){
+        /*$("#div1").on("click", function(){
+         alert(123);
+         }).trigger("click");*/
+//        $("#div1").off("click");
+        /*$("#div1").on("mouseenter", function(){
+         console.log("div1 mouseenter");
+         });
+         $("#div2").on("mouseenter", function(e){
+         console.log("div2 mouseenter");
+         //            e.stopPropagation();
+         });*/
+
+        /* $("#div1").hover(function(){
+         console.log("over");
+         }, function(){
+         console.log("out");
+         });*/
+        /*$("#div1").on("click", function(e){
+         //            console.log(this);
+         //            console.log(e.target);
+         console.log(e.currentTarget === this);
+         });*/
+
+        /*var oDiv2 = document.getElementById("div2");
+         oDiv2.onclick = function(e){
+         console.log(e);
+         };*/
+
+        $("#ul1").on("click", "li", function(){
+            console.log(this);
+        });
+    });
+</script>
+</body>
+</html>
