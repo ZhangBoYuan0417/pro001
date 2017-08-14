@@ -1,0 +1,276 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+.wrap {
+    width: 988px;
+    height: 100%;
+    margin: 5px auto;
+    position: relative;
+}
+
+/*top 开始*/
+
+#top {
+    background: url("../images/headerbg.png");
+    height: 105px;
+}
+#top img {
+    float: left;
+    vertical-align: middle;
+}
+#top #top-input {
+    width: 215px;
+    height: 28px;
+    margin-top: 16px;
+    margin-left: 50px;
+    float: left;
+}
+#top .button {
+    width: 128px;
+    height: 23px;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+#top .button li{
+    width: 15px;
+    height: 15px;
+    float:left;
+    margin-right:5px;
+    text-indent:-999px;
+    overflow:hidden;
+    display:block;
+    cursor:pointer;
+    background-image:url("../images/theme.gif");
+}
+#top .top-nav {
+    width: 990px;
+    height: 35px;
+    position: absolute;
+    bottom: 0;
+
+}
+#top .top-nav a {
+    color: #ffffff;
+    font-size: 14px;
+    margin: 10px;
+    height: 35px;
+    line-height: 35px;
+}
+#top .top-nav li {
+    float: left;
+}
+#top #skin_0{
+    background-position:0px 0px;
+}
+#top #skin_1{
+    background-position:15px 0px;
+}
+#top #skin_2{
+    background-position:35px 0px;
+}
+#top #skin_3{
+    background-position:55px 0px;
+}
+#top #skin_4{
+    background-position:75px 0px;
+}
+#top #skin_5{
+    background-position:95px 0px;
+}
+#top #skin_0.selected{
+    background-position:0px 15px !important;
+}
+#top #skin_1.selected{
+    background-position:15px 15px !important;
+}
+#top #skin_2.selected{
+    background-position:35px 15px !important;
+}
+#top #skin_3.selected{
+    background-position:55px 15px !important;
+}
+#top #skin_4.selected{
+    background-position:75px 15px !important;
+}
+#top #skin_5.selected{
+    background-position:95px 15px !important;
+}
+#top .brand {
+    background: #ffffff;
+    position: absolute;
+    z-index: 9999;
+    display: none;
+}
+#top .brand dt,#top .brand dd{
+    margin: 5px;
+    float: left;
+}
+
+/*top 结束*/
+/*main 开始*/
+#main {
+    margin-top: 10px;
+}
+#main .left-chose {
+    height: 560px;
+    width: 187px;
+    border: 1px solid;
+    float: left;
+}
+#main .commodity {
+    color: #ffffff;
+    padding: 10px;
+    font-size: 12px;
+}
+#main .classify {
+    height: 100%;
+    width: 187px;
+    margin: 0 10px;
+}
+#main .trademark li {
+    width: 90px;
+    float: left;
+}
+#main .recommend {
+    width: 164px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    border-bottom: #eeeeee;
+    float: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+#main .trademark a {
+    width: 24px;
+    height: 14px;
+    font-size: smaller;
+    color: #000;
+}
+#main .trademark a:hover {
+    color: blue;
+}
+#main .middle {
+    float: left;
+    width: 550px;
+    height: 321px;
+    margin-left: 10px;
+    position: relative;
+}
+#main .middle img {
+    display: none;
+}
+#main .middle .selected2 {
+    display: block;
+}
+#main .middle .ads {
+    width: 550px;
+    height: 42px;
+    position: absolute;
+    bottom: 0;
+}
+#main .middle .ads li {
+    width: 109px;
+    height: 42px;
+    float: left;
+    background: #444444;
+    opacity: 0.7;
+    cursor: pointer;
+    margin-left: 1px;    text-align: center;
+
+}
+#main .middle .ads li a{
+    color: #fff;
+    font-size: 12px;
+}
+#main .middle .ads  .selected1{
+    background: #37a7d7 url("../images/adindex.gif" ) no-repeat center 39px;
+    opacity: 1;
+    
+}
+#main .right{
+    width: 230px;
+    height: 321px;
+    float: left;
+    margin-left: 9px;
+    position: relative;
+}
+#main .right .active{
+    width: 230px;
+    height: 142px;
+    border:#eeeeee solid 1px;
+}
+#main .right .recommend{
+    border-bottom:#eeeeee solid 1px;
+    float: left;
+}
+#main .right .notice{
+    float: left;
+}
+#main .right .notice a{
+    color: #000;
+    font-size: 10px;
+}
+#main .right .notice a:hover {
+    color: blue;
+}
+#main .shose{
+    width: 790px;
+    height: 220px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#main .shose .change li{
+    float: left;
+    text-align: center;
+    margin:0 5px;
+}
+#main .imgs-sports,#main .imgs-girl,#main .imgs-man,#main .imgs-child{
+    display:none;
+}
+#main .shose .selected{
+    display: block;
+}
+#main .shose .numbers{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#main .shose .numbers li {
+    width: 44px;
+    height: 21px;
+    margin:0 10px;
+    float: left;
+    font-size: 12px;
+    text-align: center;
+    line-height: 21px;
+    background: #c3c3c3;
+}
+#main .shose .numbers  .selected{
+    background: #FA5889 url("../images/chos.gif") no-repeat scroll 50% bottom;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*main 结束*/
