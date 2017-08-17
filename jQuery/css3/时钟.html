@@ -8,31 +8,68 @@
             padding: 0;
             margin: 0;
         }
-
+        #body{
+            perspective: 1000px;
+        }
         #container {
             width: 500px;
             height: 500px;
             margin-top: 100px;
             margin-left: 200px;
-            position: relative;
-
+            position: absolute;
+            animation: xx 1s linear infinite;
         }
-
+        @keyframes xx {
+            from{}
+            to{transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg)}
+        }
         #clock {
             width: 500px;
             height: 500px;
             border: 5px solid;
             border-radius: 50%;
         }
+        #dial li{
+            width: 2px;
+            height: 6px;
+            background: #000000;
+            list-style: none;
+            position: absolute;
+            top: 4px;
+            left: 254px;
+            transform-origin: 0 250px;
+        }
+        /*#dial li:nth-child(1){
+            transform: rotate(0deg);
+        }
+        #dial li:nth-child(2){
+            transform: rotate(6deg);
+        }
+        #dial li:nth-child(3){
+            transform: rotate(12deg);
+        }
+        #dial li:nth-child(4){
+            transform: rotate(18deg);
+        }
+        #dial li:nth-child(5){
+            transform: rotate(24deg);
+        }
+        #dial li:nth-child(6){
+            transform: rotate(30deg);
+        }*/
+        #dial li:nth-child(5n+1){
+            height: 10px;
+        }
 
         .pionter {
             margin: 50% 50%;
             float: left;
             transform: translate(-50%,-100%);
-            transform-origin: bottom center;
+            transform-origin: bottom;
             position: absolute;
             left: 0;
             top: 0;
+            transition: 1s all;
         }
 
         #hour {
@@ -57,6 +94,7 @@
 <body>
 <div id="container">
     <div id="clock">
+        <ul id="dial"></ul>
         <div id="hour" class="pionter"></div>
         <div id="minute" class="pionter"></div>
         <div id="seconds" class="pionter"></div>
@@ -66,6 +104,9 @@
     var oHour = document.getElementById('hour');
     var oMinute = document.getElementById('minute');
     var oSeconds = document.getElementById('seconds');
+    var oDial = document.getElementById("dial");
+    var oContainer= document.getElementById('container')
+
     setInterval(function () {
         var d = new Date();
 
@@ -83,10 +124,41 @@
         oHour.style.transform = 'translate(-50%,-100%) rotate(' + a + "deg)";
         oMinute.style.transform = 'translate(-50%,-100%) rotate(' + b + "deg)";
         oSeconds.style.transform = 'translate(-50%,-100%) rotate(' + c + "deg)";
-//        console.log(a);
-//        console.log(b);
-//        console.log(c);
+
     }, 1000);
+    for(var i=0; i<60; i++){
+        /*var oLi = document.createElement("li");
+         oDial.appendChild(oLi);*/
+        oDial.innerHTML += "<li style='transform: rotate("+ i * 6 +"deg)'></li>";
+    }
+    oContainer.onmousedown =function (e) {
+        e= e||window.event;
+        var disX = e.clientX - oContainer.offsetLeft;
+        var disY = e.clientY - oContainer.offsetTop;
+        document.onmousemove = function (e) {
+            e = e || window.event;
+            oContainer.style.left = e.clientX - disX + 'px';
+            oContainer.style.top = e.clientY - disY + 'px';
+        };
+
+        oContainer.onmouseup = function () {
+            document.onmousemove = null;
+        };
+    };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </script>
