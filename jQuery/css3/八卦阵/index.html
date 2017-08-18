@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #center{
+            width: 198px;
+            height: 201px;
+            margin: 500px;
+            animation: rotate1 1s linear infinite;
+        }
+
+        .container{
+            width: 900px;
+            height: 900px;
+            position: absolute;
+            top: 150px;
+            left:150px;
+
+
+        }
+        #container1{
+            animation: rotate 2s linear infinite;
+        }
+        .container img{
+            position: absolute;
+        }
+        #container2{
+            transform: rotate(45deg);
+            animation: rotate2 2s linear infinite;
+        }
+        #container3{
+            animation: rotate1 1s linear infinite;
+        }
+        #container4{
+            animation: rotate 1s linear infinite;
+        }
+        @keyframes rotate {
+            from{
+
+            }
+            to{
+                transform: rotateZ(-360deg);
+            }
+        }@keyframes rotate2 {
+             from{
+
+             }
+             to{
+                 transform: rotateZ(360deg);
+             }
+         }
+        @keyframes rotate1 {
+            from{
+
+            }
+            to{
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="center"><img src="big.jpg" alt=""></div>
+<div id="container1" class="container"><img src="small.jpg" alt=""><img src="small.jpg" alt="" style="top: 0;right: 0;"><img src="small.jpg" alt="" style="bottom: 0;left: 0;"><img src="small.jpg" alt="" style="bottom: 0;right: 0;"></div>
+<div id="container2" class="container"><img src="small.jpg" alt=""><img src="small.jpg" alt="" style="top: 0;right: 0;"><img src="small.jpg" alt="" style="bottom: 0;left: 0;"><img src="small.jpg" alt="" style="bottom: 0;right: 0;"></div>
+<div id="container3" class="container"><img src="small.jpg" alt=""><img src="small.jpg" alt="" style="top: 0;right: 0;"><img src="small.jpg" alt="" style="bottom: 0;left: 0;"><img src="small.jpg" alt="" style="bottom: 0;right: 0;"></div>
+<div id="container4" class="container"><img src="small.jpg" alt=""><img src="small.jpg" alt="" style="top: 0;right: 0;"><img src="small.jpg" alt="" style="bottom: 0;left: 0;"><img src="small.jpg" alt="" style="bottom: 0;right: 0;"></div>
+</body>
+</html>
