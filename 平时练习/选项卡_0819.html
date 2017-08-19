@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #container {
+            width: 800px;
+            height: 500px;
+            background: #cccccc;
+        }
+
+        #header li {
+            width: 200px;
+            height: 50px;
+            margin: 10px;
+            background: #ffffff;
+            float: left;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        #matter, #header {
+            float: left;
+        }
+
+        #matter > p {
+            width: 800px;
+            height: 200px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        #header .selected {
+            background: #000;
+            color: #ffffff;
+        }
+
+        #matter .selected {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <ul id="header">
+        <li class="selected">html</li>
+        <li>css</li>
+        <li>js</li>
+    </ul>
+    <div id="matter">
+        <p class="selected">html...</p>
+        <p>css...</p>
+        <p>js...</p>
+    </div>
+</div>
+<script>
+    (function () {
+        var oLi = document.getElementsByTagName('li');
+        var oMatter = document.getElementById('matter');
+        var oP = oMatter.children;
+        for (var i = 0; i < oLi.length; i++) {
+            oLi[i].index = i;
+            oLi[i].onclick = function () {
+
+                for (var i = 0; i < oLi.length; i++) {
+                    oLi[i].className = '';
+                    oP[i].className = '';
+                }
+                this.className = 'selected';
+                oP[this.index].className = 'selected';
+            }
+        }
+
+
+    })();
+</script>
+</body>
+</html>
