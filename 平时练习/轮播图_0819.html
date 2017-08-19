@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #container {
+            width: 680px;
+            height: 344px;
+            position: relative;
+        }
+        #imgs img{
+            display: none;
+        }
+        #imgs img.selected{
+            display: block;
+        }
+        #numb{
+            position: absolute;
+            right: 0;
+            bottom:0;
+        }
+        #numb li ,#arrow li{
+            width: 40px;
+            height: 40px;
+            background: #ffffff;
+            border:1px solid;
+            margin: 5px;
+            text-align: center;
+            line-height: 40px;
+            float: left;
+        }
+        #numb li.selected{
+            background: #000;
+            color: #ffffff;
+        }
+        #arrow{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="imgs">
+        <img src="img/1.jpg" alt="" class="selected">
+        <img src="img/2.jpg" alt="">
+        <img src="img/3.jpg" alt="">
+        <img src="img/4.jpg" alt="">
+    </div>
+    <ul id="numb">
+        <li class="selected">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <ul id="arrow">
+        <li id="prev">&lt;</li>
+        <li id="next">&gt;</li>
+    </ul>
+</div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        var nowIndex = 0;
+        var timer;
+        $('#numb li').on('mouseover',function () {
+            nowIndex = $(this).index();
+            chengImg()     ;
+        });
+        $('#prev').on('click',function () {
+            nowIndex --;
+            if (nowIndex==-1){
+                nowIndex = $('#numb li').length-1;
+            }
+            chengImg();
+        });
+        $('#next').on('click',function () {
+           nowIndex ++ ;
+           if (nowIndex==$('#numb li').length){
+               nowIndex=0;
+           }
+           chengImg();
+        });
+        function chengImg() {
+            $('#numb li').eq(nowIndex).addClass('selected').siblings().removeClass('selected');
+            $('#imgs img').eq(nowIndex).addClass('selected').siblings().removeClass('selected');
+        }
+        play();
+        $('#container').hover(function () {
+           clearInterval(timer);
+        },function () {
+            play();
+        });
+
+        function play() {
+             timer = setInterval(function () {
+                $('#next').trigger('click');
+            },1000)
+        };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    })
+</script>
+</body>
+</html>
