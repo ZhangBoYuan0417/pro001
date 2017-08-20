@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #container {
+            width: 150px;
+            height: 150px;
+            background: #ff0000;
+            text-align: center;
+            line-height: 150px;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="container">haha</div>
+<script>
+    (function () {
+        var oContainer = document.getElementById('container');
+        oContainer.onmousedown = function (e) {
+            e = e || window.event;
+            var disX = e.clientX - oContainer.offsetLeft;
+            var disY = e.clientY - oContainer.offsetTop;
+            document.onmousemove = function (e) {
+                e = e || window.event;
+                oContainer.style.left = e.clientX - disX + 'px';
+                oContainer.style.top = e.clientY - disY + 'px';
+            };
+
+            oContainer.onmouseup = function () {
+                document.onmousemove = null;
+            };
+        };
+
+    })();
+</script>
+</body>
+</html>
