@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 2000px;
+        }
+        #goTop{
+            height: 150px;
+            width: 150px;
+            background: #f00;
+            color: #ffffff;
+            position: fixed;
+            bottom: 5px;
+            right: 5px;
+            line-height: 150px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+hahhahahhahahahhahah
+<div id="goTop">TOP</div>
+<script>
+    (function () {
+        var oTop = document.getElementById('goTop');
+        oTop.onclick = function () {
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+           var timer = setInterval(function () {
+                window.scrollTo(0 ,scrollTop-=10);
+                if (scrollTop <=0){
+                    clearInterval(timer);
+                }
+            },30)
+        };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    })()
+</script>
+</body>
+</html>
