@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+.container{
+    position: relative;
+    width: 680px;
+    height: 344px;
+}
+.container-imgs img{
+    display: none;
+}
+.container-imgs img.selected{
+    display: block;
+}
+.container-numbs{
+
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.container-numbs li{
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+    background: #000;
+    color: #ffffff;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+}
+.container-numbs li.selected{
+    background: orange;
+}
+.lessThan{
+    width: 40px;
+    height: 40px;
+    background: #000;
+    color: #ffffff;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+.greatThan{
+    width: 40px;
+    height: 40px;
+    background: #000;
+    color: #ffffff;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    left: 55px;
+    bottom:10px;
+}
