@@ -1,0 +1,42 @@
+/*top开始*/
+#top{
+    width: 100%;
+    height: 100px;
+}
+
+#top .left{
+    width: 40px;
+    margin:30px;
+}
+#top .left span{
+    width: 30px;
+    height: 21px;
+    display: block;
+    font-size:12px;
+    text-align: center;
+    margin-top: -2px;
+}
+#top.center{
+    width: 228px;
+    height: 100px;
+    display: block;
+    background: url("../img/logo.svg");
+}
+
+
+
+
+
+
+
+
+#top.left,#top.center{
+    float: left;
+}
+
+
+
+
+
+
+/*top结束*/
