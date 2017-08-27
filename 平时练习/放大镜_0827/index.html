@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div id="left">
+
+    <div id="mask"></div>
+    <div id="mask2"></div>
+</div>
+<div id="right"></div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+
+        $('#mask2').on('mouseover', function () {
+            $('#mask').css('display', 'block');
+            $('#right').css('display', 'block');
+        });
+        $('#left').on('mousemove', function (e) {
+            e = e || window.event;
+            var $top = e.clientY - $('#left').offsetHeight / 2;
+            var $left = e.clientX - $('#left').offsetWidth / 2;
+            if ($top < 0) {
+                $top = 0;
+            }
+            if ($left < 0) {
+                $left = 0
+            }
+            var $MaxTop = $('#left').offsetHeight - $('#mask').offsetHeight;
+            var $MaxLeft = $('#left').offsetWidth - $('#mask').offsetWidth;
+            if ($top > $MaxTop) {
+                $top = $MaxTop;
+            }
+            if ($left > $MaxLeft) {
+                $left = $MaxLeft;
+            }
+            $('#mask').css({
+                'position':'aboslute',
+                'left':'$left'  + 'px',
+                'top': '$top'  +'px'
+            });
+            var $fbigTop = $top / $MaxTop;
+            var $fbigLeft = $left / $MaxLeft;
+            var $rtop = -$fbigTop * (800 - $('#right').offsetHeight) + 'px';
+            var $rleft = -$fbigLeft * (800 - $('#right').offsetWidth) + 'px';
+            $("#right").css({
+                'backgroundPosition': '$rtop $rleft'
+            })
+        })
+        $('#mask2').on('mouseout', function () {
+            $('#mask').css('display', 'none');
+            $('#right').css('display', 'none');
+        });
+
+
+    })
+</script>
+</body>
+</html>
