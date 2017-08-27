@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#left {
+    width: 400px;
+    height: 400px;
+    background: url("1.jpg") no-repeat;
+    float: left;
+    position: relative;
+}
+
+#right {
+    width: 400px;
+    height: 400px;
+    background: url("2.jpg") no-repeat;
+    background-position: 0 0;
+    float: left;
+    display: none;
+}
+
+#mask {
+    width: 200px;
+    height: 200px;
+    background: #c3c3c3;
+    opacity: .4;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#mask2 {
+    width: 400px;
+    height: 400px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
