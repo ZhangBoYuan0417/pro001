@@ -1,0 +1,16 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #191919;
+    height: 2000px;
+}
+
+a {
+    text-decoration: none;
+}
+li{
+    list-style:none;
+}
