@@ -1,0 +1,369 @@
+.overlay {
+    width: 540px;
+    position: relative;
+    background: #000;
+    opacity: .4;
+    z-index: 3;
+}
+
+#name {
+    position: absolute;
+    margin-left: 540px;
+    margin-top: -500px;
+}
+
+#name h1 {
+    color: #ffffff;
+    font-size: 80px;
+    float: left;
+}
+
+#name span {
+    display: block;
+    width: 4px;
+    height: 132px;
+    background: #ffc815;
+    float: left;
+    margin-right: 20px;
+}
+
+#name a {
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/*header开始*/
+#header {
+    z-index: 4;
+    height: 70px;
+    width: 540px;
+    background: #191919;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#header .logo {
+    width: 200px;
+    height: 70px;
+    background: #ffc815;
+    float: left;
+}
+
+#header .nav {
+    width: 70px;
+    height: 40px;
+    float: right;
+    border-left: #292929 2px solid;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#header .line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #ffffff;
+    margin-left: 20px;
+    transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+}
+
+#line_first {
+    margin-top: 8px;
+}
+
+#line_second {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/*header结束*/
+/*img开始*/
+#img {
+    width: 540px;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: url("../img/6.jpg") 0 30px no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    z-index: 2;
+}
+
+#img #words {
+    /*background: #ffff00;*/
+    position: absolute;
+    left: 50px;
+    right: 50px;
+    top: 250px;
+    bottom: 50px;
+    border-bottom: #ffffff 10px solid;
+    border-left: #ffffff 10px solid;
+}
+
+#img #words span {
+    width: 250px;
+    height: 4px;
+    display: block;
+    background: #ffc815;
+}
+
+#img #words p {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+}
+
+/*img结束*/
+/*content开始*/
+#content {
+    width: 810px;
+    height: 100%;
+    background: #292929;
+    float: left;
+    padding-left: 540px;
+}
+
+#nav2 {
+    width: 100%;
+    background: #191919;
+    height: 70px;
+    z-index: 5;
+}
+
+#nav2 li {
+    width: 82px;
+    height: 44px;
+    color: #ffffff;
+    float: left;
+    line-height: 44px;
+    text-align: center;
+    background: #292929;
+    margin: 10px 0;
+    cursor: pointer;
+    -webkit-transition: color 1s;
+    -moz-transition: color 1s;
+    -o-transition: color 1s;
+    transition: color 1s;
+}
+
+
+#nav2 .selected {
+    background: #ffc815;
+    color: #000;
+}
+
+#content #nav2 .fix {
+    position: fixed;
+    top: 0;
+}
+/*about开始*/
+#about {
+    width: 770px;
+    background: #ffffff;
+    padding: 180px 20px;
+    height: 550px;
+    border-bottom:#c3c3c3 1px solid;
+    float: left;
+}
+
+ .dialog {
+    width: 186px;
+    margin: 10px 0;
+    height: 68px;
+    text-align: center;
+    line-height: 58px;
+    background: url("../img/dialog.png") no-repeat;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+ .header {
+    font-size: 50px;
+}
+
+.header_line1 {
+    width: 180px;
+    height: 2px;
+    background: #ffc815;
+}
+
+.header_line2 {
+    width: 50px;
+    height: 4px;
+    background: #ffc815;
+}
+
+#about .about_context {
+    width: 760px;
+    height: 460px;
+    margin-top: 20px;
+}
+
+#about .about_context img {
+    width: 292px;
+}
+
+#about .about_context img, #about .about_write {
+    float: left;
+}
+#about .about_write{
+    padding: 10px;
+    width: 440px;
+}
+#about .about_context .some_fucts .left{
+    width: 216px;
+    height: 108px;
+    display: block;
+    font-size:25px ;
+    margin-top: 60px;
+    padding-top: 20px;
+    padding-left: 50px;
+    font-weight: bold;
+    background: url("../img/dialog_2.png") no-repeat;
+    float: left;
+}
+#about .about_context .some_fucts .right{
+    display: block;
+    width: 186px;
+    height: 108px;
+    float: left;
+    margin-top: 60px;
+}
+#about .about_context .some_fucts .right h2{
+    font-size: 60px;
+    font-weight: bold;
+}
+#about .about_context .some_fucts .right p{
+    font-size: 8px;
+}
+/*about结束*/
+/*resume开始*/
+#resume{
+    height:auto ;
+    margin-top: 830px;
+    background: #fff;
+    padding: 180px 40px;
+    border-bottom: #c3c3c3 1px solid;
+}
+#resume .my_bio{
+
+}
+#resume .my_bio img{
+    vertical-align:middle;
+    margin-right: 10px;
+}
+#resume .my_bio  .myBio_title{
+    height: 100px;
+    line-height: 100px;
+    margin-top: 20px;
+    font-size: 40px;
+    transition: height 1s;
+}
+#resume .my_bio  .myBio_title:hover{
+    cursor: pointer;
+    transform:translateX(20px) ;
+}
+#resume .myBio_main{
+    color: #292929;
+    font-size: 25px;
+    display: none;
+    transition: height 1s;
+}
+/*resume结束*/
+/*works开始*/
+#works{
+    padding-top: 60px;
+    background: #fff;
+    position: relative;
+}
+#my_pictures{
+    margin-top: 20px;
+    width: 100%;
+    height: 500px;
+    position: relative;
+
+}
+#my_pictures .img {
+    width: 375px;
+    height: 250px;
+    border: 5px solid #fff;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left:0;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+#my_pictures .img span {
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+#next, #prev {
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    margin-top: 45px;
+    cursor: pointer;
+    display: none;
+}
+
+#next {
+    background-image: url(../img/next.png);
+    right: 0;
+    border-radius: 8px 0 0 8px;
+}
+
+#prev {
+    background-image: url(../img/prev.png);
+    left: 0;
+    border-radius: 0 8px 8px 0;
+}
+/*works结束*/
+/*skills开始*/
+#skills{
+    padding-top: 60px;
+    background: #fff;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*skills结束*/
+/*content结束*/
