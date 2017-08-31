@@ -131,6 +131,7 @@
     background: #292929;
     float: left;
     padding-left: 540px;
+    z-index: 3;
 }
 
 #nav2 {
@@ -342,7 +343,46 @@
 #skills{
     padding-top: 60px;
     background: #fff;
+    height: 1000px;
 
+}
+#sector{
+    float: left;
+    margin-top: 20px;
+    width: 200px;
+}
+#sector p{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #ffc815;
+}
+#bar-type{
+    width: 580px;
+    height: 200px;
+    float: right;
+    margin-top: 30px;
+}
+/*skills结束*/
+/*contact开始*/
+#contact {
+    padding-top: 150px;
+    background: #ffffff;
+}
+#contact .contact_me{
+     height: 800px;
+ }
+#contact .contact_me img{
+
+    width: 100px;
+    margin-left: 20px;
+}#contact .contact_me li{
+     width: 500px;
+ }
+#contact .contact_me p{
+
+    display: block;
+    margin-left: 80px;
 }
 
 
@@ -352,18 +392,5 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*skills结束*/
+/*contact结束*/
 /*content结束*/
