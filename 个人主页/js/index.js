@@ -22,7 +22,14 @@ $(function () {
                     scrollToo(1600);
                     break;
                 case 2:
-                    scrollToo(2380)
+                    scrollToo(2380);
+                    break;
+                case 3:
+                    scrollToo(3150);
+                    break;
+                case 4:
+                    scrollToo(4300);
+                    break;
             }
             $('#content #nav2 li').hover(function () {
                 $(this).css('color', '#ffc815')
@@ -236,6 +243,48 @@ $(function () {
         }
 
     }
+    drawRing(200,200,90,'canvasHtml');
+    drawRing(200,200,85,'canvasCss');
+    drawRing(200,200,75,'canvasJs');
+    //画布 封装扇形进度条函数
+    function drawRing(w,h,val,x){
+        //先创建一个canvas画布对象，设置宽高
+        var c=document.getElementById(x);
+        var ctx=c.getContext('2d');
+        ctx.canvas.width=w;
+        ctx.canvas.height=h;
+        //圆环有两部分组成，底部灰色完整的环，根据百分比变化的环
+        //先绘制底部完整的环
+        //起始一条路径
+        ctx.beginPath();
+        //设置当前线条的宽度
+        ctx.lineWidth=10;//10px
+        //设置笔触的颜色
+        ctx.strokeStyle='#eeeeee';
+        //arc()方法创建弧/曲线（用于创建圆或部分圆）arc(圆心x,圆心y,半径,开始角度,结束角度)
+        ctx.arc(100,100,80,0,2*Math.PI);
+        //绘制已定义的路径
+        ctx.stroke();
+
+        //绘制根据百分比变动的环
+        ctx.beginPath();
+        ctx.lineWidth=10;
+        ctx.strokeStyle='#8f8f8f';
+        //设置开始处为0点钟方向（-90*Math.PI/180）
+        //x为百分比值（0-100）
+        ctx.arc(100,100,80,-90*Math.PI/180,(val*3.6-90)*Math.PI/180);
+        ctx.stroke();
+        //绘制中间的文字
+        ctx.font='15px';
+        ctx.fillStyle='#747474';
+        ctx.textBaseline='middle';
+        ctx.textAlign='center';
+        ctx.fillText(val+'%',100,100);
+    }
+    //封装条形进度条函数
+
+
+
 
 
 });
