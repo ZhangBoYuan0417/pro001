@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单控件</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body>
+<form role="form">
+    <div class="form-group">
+        <input type="email" class="form-control" placeholder="Enter email">
+
+    </div>
+</form>
+
+<form role="form">
+    <div class="form-group">
+        <select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <select multiple class="form-control">
+            <option>足球</option>
+            <option>游泳</option>
+            <option>慢跑</option>
+            <option>跳舞</option>
+        </select>
+    </div>
+
+</form>
+<form role="form">
+    <div class="form-group">
+        <textarea class="form-control" rows="3"></textarea>
+    </div>
+</form>
+<form role="form">
+    <h3>案例1</h3>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" value="">
+            记住密码
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="love" checked>
+            喜欢
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="hate">
+            不喜欢
+        </label>
+    </div>
+
+
+</form>
+<form role="form">
+    <div class="form-group">
+        <label class="checkbox-inline">
+            <input type="checkbox"  value="option1">游戏
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox"  value="option2">摄影
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox"  value="option3">旅游
+        </label>
+    </div>
+    <div class="form-group">
+        <label class="radio-inline">
+            <input type="radio"  value="option1" name="sex">男性
+        </label>
+        <label class="radio-inline">
+            <input type="radio"  value="option2" name="sex">女性
+        </label>
+        <label class="radio-inline">
+            <input type="radio"  value="option3" name="sex">中性
+        </label>
+    </div>
+</form>
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th>Button</th>
+        <th>class=""</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><button class="btn" href="#">Default</button></td>
+        <td><code>btn</code></td>
+        <td>Standard gray button with gradient</td>
+    </tr>
+    <tr>
+        <td><button class="btn btn-primary" href="#">Primary</button></td>
+        <td><code>btn btn-primary</code></td>
+        <td>Provides extra visual weight and identifies the primary action in a set of buttons</td>
+    </tr>
+    <tr>
+        <td><button class="btn btn-info" href="#">Info</button></td>
+        <td><code>btn btn-info</code></td>
+        <td>Used as an alternative to the default styles</td>
+    </tr>
+    <tr>
+        <td><button class="btn btn-success" href="#">Success</button></td>
+        <td><code>btn btn-success</code></td>
+        <td>Indicates a successful or positive action</td>
+    </tr>
+    <tr>
+        <td><button class="btn btn-warning" href="#">Warning</button></td>
+        <td><code>btn btn-warning</code></td>
+        <td>Indicates caution should be taken with this action</td>
+    </tr>
+    <tr>
+        <td><button class="btn btn-danger" href="#">Danger</button></td>
+        <td><code>btn btn-danger</code></td>
+        <td>Indicates a dangerous or potentially negative action</td>
+    </tr>
+    <tr>
+        <td><button class="btn btn-inverse" href="#">Inverse</button></td>
+        <td><code>btn btn-inverse</code></td>
+        <td>Alternate dark gray button, not tied to a semantic action or use</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

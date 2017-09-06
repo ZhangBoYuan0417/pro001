@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单提示信息</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body>
+<h3>示例1</h3>
+<form role="form">
+    <div class="form-group has-success has-feedback">
+        <label class="control-label" for="inputSuccess2">成功状态</label>
+        <input type="text" class="form-control" id="inputSuccess2" placeholder="成功状态" >
+        <span class="help-block">你输入的信息是正确的</span>
+        <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+    </div>
+    <div class="form-group has-warning has-feedback">
+        <label class="control-label" for="inputWarning1">警告状态</label>
+        <input type="text" class="form-control" id="inputWarning1" placeholder="警告状态">
+        <span class="help-block">请输入正确信息</span>
+        <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+    </div>
+    <div class="form-group has-error has-feedback">
+        <label class="control-label" for="inputError1">错误状态</label>
+        <input type="text" class="form-control" id="inputError1" placeholder="错误状态">
+        <span class="help-block">你输入的信息是错误的</span>
+        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+    </div>
+</form>
+<br>
+<br>
+<br>
+<h3>示例2</h3>
+<form role="form">
+    <div class="form-group">
+        <label class="control-label" for="inputSuccess1">成功状态</label>
+        <div class="row">
+            <div class="col-xs-6">
+                <input type="text" class="form-control" id="inputSuccess1" placeholder="成功状态" >
+            </div>
+            <span class="col-xs-6 help-block">你输入的信息是正确的</span>
+        </div>
+    </div>
+</form>
+</body>
+</html>

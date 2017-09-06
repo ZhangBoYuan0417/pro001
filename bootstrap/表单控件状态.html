@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单控件状态</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<form role="form">
+    <div class="form-group">
+        <input class="form-control input-lg" type="text" placeholder="不是焦点状态下效果">
+        <input class="form-control input-lg" type="text" placeholder="焦点状态下效果">
+    </div>
+    <div class="form-group">
+        <label class="checkbox-inline">
+            <input class="form-control" type="checkbox" value="1">123
+        </label>
+        <label class="checkbox-inline">
+            <input class="form-control" type="checkbox" value="2">234
+        </label>
+    </div>
+    <div class="form-group">
+        <label class="radio-inline">
+            <input type="radio" class="form-control" value="01" name="num">1
+        </label>
+        <label class="radio-inline">
+            <input type="radio" class="form-control" value="02" name="num">2
+        </label>
+    </div>
+</form>
+<form role="form">
+    <fieldset disabled>
+        <div class="form-group">
+            <label for="disabledTextInput1">禁用的输入框</label>
+            <input type="text" id="disabledTextInput1" class="form-control" placeholder="禁止输入">
+        </div>
+        <div class="form-group">
+            <label for="disabledSelect1">禁用的下拉框</label>
+            <select id="disabledSelect1" class="form-control">
+                <option>不可选择</option>
+            </select>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox">无法选择
+            </label>
+        </div>
+        <button type="submit" class="btnbtn-primary">提交</button>
+    </fieldset>
+</form>
+<h3>示例1</h3>
+<form role="form" class="form-horizontal">
+    <div class="form-group">
+        <div class="col-xs-6">
+            <input class="form-control input-lg" type="text" placeholder="不是焦点状态下效果">
+        </div>
+        <div class="col-xs-6">
+            <input class="form-control input-lg" id="disabledInput" type="text" placeholder="表单已被禁用，不可输入" disabled>
+        </div>
+    </div>
+</form>
+<br>
+<br>
+<br>
+<h3>示例2</h3>
+<form role="form">
+    <fieldset disabled>
+        <div class="form-group">
+            <label for="disabledTextInput2">禁用的输入框</label>
+            <input type="text" id="disabledTextInput2" class="form-control" placeholder="禁止输入">
+        </div>
+        <div class="form-group">
+            <label for="disabledSelect2">禁用的下拉框</label>
+            <select id="disabledSelect2" class="form-control">
+                <option>不可选择</option>
+            </select>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox"> 无法选择
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">提交</button>
+    </fieldset>
+</form>
+<br>
+<br>
+<br>
+<h3>示例3</h3>
+<form role="form">
+    <fieldset disabled>
+        <legend><input type="text" class="form-control" placeholder="显然我颜色变灰了，但是我没被禁用，不信？单击试一下" /></legend>
+        <div class="form-group">
+            <label for="disabledTextInput">禁用的输入框</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="禁止输入">
+        </div>
+        <div class="form-group">
+            <label for="disabledSelect">禁用的下拉框</label>
+            <select id="disabledSelect" class="form-control">
+                <option>不可选择</option>
+            </select>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox"> 无法选择
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">提交</button>
+    </fieldset>
+</form>
+<h3>示例1</h3>
+<form role="form">
+    <div class="form-group has-success">
+        <label class="control-label" for="inputSuccess11">成功状态</label>
+        <input type="text" class="form-control" id="inputSuccess11" placeholder="成功状态" >
+    </div>
+    <div class="form-group has-warning">
+        <label class="control-label" for="inputWarning11">警告状态</label>
+        <input type="text" class="form-control" id="inputWarning11" placeholder="警告状态">
+    </div>
+    <div class="form-group has-error">
+        <label class="control-label" for="inputError11">错误状态</label>
+        <input type="text" class="form-control" id="inputError11" placeholder="错误状态">
+    </div>
+</form>
+<br>
+<br>
+<br>
+<h3>示例2</h3>
+<form role="form">
+    <div class="form-group has-success has-feedback">
+        <label class="control-label" for="inputSuccess1">成功状态</label>
+        <input type="text" class="form-control" id="inputSuccess1" placeholder="成功状态" >
+        <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+    </div>
+    <div class="form-group has-warning has-feedback">
+        <label class="control-label" for="inputWarning1">警告状态</label>
+        <input type="text" class="form-control" id="inputWarning1" placeholder="警告状态">
+        <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+    </div>
+    <div class="form-group has-error has-feedback">
+        <label class="control-label" for="inputError1">错误状态</label>
+        <input type="text" class="form-control" id="inputError1" placeholder="错误状态">
+        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+    </div>
+
+</form>
+</body>
+</html>
