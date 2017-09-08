@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>下拉菜单</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
         body{margin:50px;padding:50px;}
     </style>
@@ -22,7 +22,42 @@
         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
     </ul>
 </div>
-<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
+        食物
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+        <li role="presentation" class="dropdown-header">水果</li>
+        <li role="presentation"><a href="#" role="menuitem" tabindex="-1">苹果</a></li>
+        <li role="presentation"><a href="#" role="menuitem" tabindex="-1">香蕉</a></li>
+        <li role="presentation"><a href="#" role="menuitem" tabindex="-1">梨</a></li>
+        <li role="presentation"><a href="#" role="menuitem" tabindex="-1">桃</a></li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation" class="dropdown-header">蔬菜</li>
+        <li role="presentation"><a href="#" role="menuitem" tabindex="-1">芹菜</a></li>
+        <li role="presentation"><a href="#" role="menuitem" tabindex="-1">萝卜</a></li>
+        <li role="presentation"><a href="#" role="menuitem" tabindex="-1">茄子</a></li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation" class="dropdown-header">主食</li>
+        <li role="presentation"><a href="#" role="menuitem" tabindex="-1">米饭</a></li>
+        <li role="presentation"><a href="#" role="menuitem" tabindex="-1">馒头</a></li>
+        <li role="presentation"><a href="#" role="menuitem" tabindex="-1">面条</a></li>
+    </ul>
+</div>
+<div class="dropdown">
+    <button class="btn btn-default dropdown-togle" type="button" id="dropMenu3" data-toggle="dropdown">
+        选择你喜欢的水果
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropMenu3">
+        <li role="presentation"><a href="#" role="menuitem" tabindex="-1">苹果</a></li>
+        <li role="presentation" class="active"><a href="#" role="menuitem" tabindex="-1">香蕉</a></li>
+        <li role="presentation"><a href="#" role="menuitem" tabindex="-1">梨</a></li>
+        <li role="presentation" class="disabled"><a href="#" role="menuitem" tabindex="-1">桃</a></li>
+    </ul>
+</div>
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
