@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>嵌套分组</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<div class="btn-group">
+    <button class="btn btn-default" type="button">首页</button>
+    <button class="btn btn-default" type="button">产品展示</button>
+    <button class="btn btn-default" type="button">案例分析</button>
+    <button class="btn btn-default" type="button">联系我们</button>
+    <div class="btn-group">
+        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">关于我们<span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li><a href="#">公司简介</a></li>
+            <li><a href="#">企业文化</a></li>
+            <li><a href="#">组织结构</a></li>
+            <li><a href="#">客服服务</a></li>
+        </ul>
+    </div>
+</div>
+<div class="btn-group">
+    <button class="btn btn-default" type="button">首页</button>
+    <div class="btn-group">
+        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">产品展示<span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li><a href="#">收割机</a></li>
+            <li><a href="#">电动机</a></li>
+            <li><a href="#">拖拉机</a></li>
+            <li><a href="#">电动车</a></li>
+        </ul>
+    </div>
+    <button class="btn btn-default" type="button">案例分析</button>
+    <button class="btn btn-default" type="button">联系我们</button>
+    <button class="btn btn-default" type="button">关于我们</button>
+</div>
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

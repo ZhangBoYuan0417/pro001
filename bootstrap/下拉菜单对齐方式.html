@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>对齐方式</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 50px 100px;
+        }
+        .dropdown{
+            float: left;
+        }
+        h4{
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+<h4>使用pull-right类使下拉菜单与父容器右边对齐</h4>
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+        下拉菜单
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+    </ul>
+</div>
+<br />
+<br />
+<h4>使用dropdown-menu-right类使下拉菜单与父容器右边对齐</h4>
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu11" data-toggle="dropdown">
+        下拉菜单
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu11">
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+    </ul>
+</div>
+<br />
+<br />
+<h4>下拉菜单与父容器左边对齐</h4>
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu111" data-toggle="dropdown">
+        下拉菜单
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-left" role="menu" aria-labelledby="dropdownMenu111">
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+    </ul>
+</div>
+
+
+
+
+<div class="dropdown">
+    <button class="dropdown-toggle btn btn-default" type="button" id="dropdownMenu2" data-toggle="dropdown">
+        食物
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu2">
+        <li role="presentation" class="dropdown-header">水果</li>
+        <li role="presentation"><a href="#" role="menuitem" tabindex="-1">苹果</a></li>
+        <li role="presentation"><a href="#" role="menuitem" tabindex="-1">香蕉</a></li>
+        <li role="presentation"><a href="#" role="menuitem" tabindex="-1">梨</a></li>
+        <li role="presentation"><a href="#" role="menuitem" tabindex="-1">桃</a></li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation" class="dropdown-header">蔬菜</li>
+        <li role="presentation"><a href="#" role="menuitem" tabindex="-1">芹菜</a></li>
+        <li role="presentation"><a href="#" role="menuitem" tabindex="-1">萝卜</a></li>
+        <li role="presentation"><a href="#" role="menuitem" tabindex="-1">茄子</a></li>
+    </ul>
+</div>
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+</html>
