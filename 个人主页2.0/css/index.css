@@ -1,0 +1,115 @@
+/*导航条开始*/
+.navbar-nav {
+    float: right;
+}
+
+.navbar {
+    height: 80px;
+}
+
+.navbar-toggle {
+    margin-top: 22px;
+}
+
+#navTop {
+    position: absolute;
+    right: 0;
+}
+
+#navTop li {
+    width: 100px;
+    height: 82px;
+}
+
+.navbar-nav > li > a {
+    text-align: center;
+    line-height: 50px;
+    width: 100px;
+    height: 79px;
+    font-weight: bolder;
+    background: #FFFFFF;
+}
+
+#navTop > .active > a {
+    background: none;
+    border-bottom: #164e71 3px solid;
+    color: #164e71;
+}
+
+/*导航条结束*/
+/*开始图片开始*/
+.begin_img {
+    position: relative;
+    overflow: hidden;
+}
+
+.begin_img img {
+    width: 150%;
+    margin-top: -300px;
+}
+
+.begin_img .intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.element {
+    font-size: 60px;
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+.begin_img_btn {
+    width: 140px;
+    color: #ffffff;
+    border: #ffffff 1px solid;
+    border-radius: 0;
+    font-size: 15px;
+}
+
+.begin_img_btn:hover {
+    background: #ffffff;
+    color: #92a3b7;
+}
+
+/*开始图片结束*/
+/*about_me开始*/
+#about_me .my_photo {
+    padding: 50px 20px 50px 80px;
+}
+
+#about_me .my_photo, #about_me .my_photo img {
+    width: 100%;
+}
+
+#about_me .mask_about{
+    width: 100%;
+    height: 0;
+    background: #000;
+    opacity: 0.4;
+    filter: alpha(opacity = 40);
+    z-index: 3;
+    transform: translateY(-100%);
+    transition: all 0.5s ease-out;
+}
+
+#about_me .about-text {
+    padding: 50px 20px;
+}
+
+#about_me .about-text h4 {
+    font-weight: bolder;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+#about_me .about-text p {
+    font-size: 15px;
+    color: #595959;
+    line-height: 26px;
+    margin-right: 80px;
+}
+
+/*about_me结束*/
