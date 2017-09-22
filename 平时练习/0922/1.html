@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+       var obj = {
+        name: 'zhangsan',
+        age: 37,
+        son: {
+            name: 'zhangsan',
+            age: 3
+        }
+    }
+    var obj1 = new Object();
+    obj1 = {
+        name: obj.name,
+        age: obj.age,
+        son: obj.son
+    }
+    obj1.name = 'lisi';
+    console.log(obj.name)
+    console.log(obj1.name)
+</script>
+</body>
+</html>
