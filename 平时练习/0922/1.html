@@ -21,8 +21,13 @@
         son: obj.son
     }
     obj1.name = 'lisi';
+    var obj2 = new Object();
+    obj2 = obj;
     console.log(obj.name)
     console.log(obj1.name)
+    obj2.name='wangwu';
+    console.log(obj.name);
+    console.log(obj2.name);
 </script>
 </body>
 </html>
