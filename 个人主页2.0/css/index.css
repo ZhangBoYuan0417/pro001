@@ -1,3 +1,9 @@
+.wrap {
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 50px;
+}
+
 /*导航条开始*/
 .navbar-nav {
     float: right;
@@ -77,19 +83,19 @@
 /*开始图片结束*/
 /*about_me开始*/
 #about_me .my_photo {
-    padding: 50px 20px 50px 80px;
+    padding: 50px 20px 50px 0;
 }
 
 #about_me .my_photo, #about_me .my_photo img {
     width: 100%;
 }
 
-#about_me .mask_about{
+#about_me .mask_about {
     width: 100%;
     height: 0;
     background: #000;
     opacity: 0.4;
-    filter: alpha(opacity = 40);
+    filter: alpha(opacity=40);
     z-index: 3;
     transform: translateY(-100%);
     transition: all 0.5s ease-out;
@@ -113,3 +119,134 @@
 }
 
 /*about_me结束*/
+/*my_skill开始*/
+#my_skills{
+    background: url("../img/skill-bg.jpg");
+}
+#my_skills p{
+    color: #FFFFFF;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+.progress{
+    background: #d7d7d7;
+    height: 6px;
+}
+#my_skills .profession-my{
+    background: #164e71;
+}
+#my_skills h4{
+    color: #d7d7d7;
+}
+#my_skills .progress-bar{
+    text-align: right;
+}
+#my_skills .progress-bar span{
+    position: absolute;
+    background: #164e71;
+    margin-top: -20px;
+    border-radius:30%;
+
+}
+/*my_skills结束*/
+/*my_blog开始*/
+#my_blog .blog{
+    height: 500px;
+    border: 1px solid #000000;
+}
+#my_blog .row>div{
+    margin-top: 10px;
+    padding: 30px;
+    transition: all 1s ;
+}
+#my_blog .row>div:hover{
+    padding: 0;
+}
+#my_blog .blog_big{
+    width: 300px;
+    height: 100px;
+    position: fixed;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%) ;
+    display: none;
+    transition: display 1s;
+}
+#my_blog .blog_go{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#my_blog .blog_big1{
+    background: #fff000;
+}
+#my_blog .blog_big2{
+    background: #ff0000;
+ }
+#my_blog .blog_big3{
+    background: #00ff00;
+}
+#my_blog .blog_big4{
+    background: #0000ff;
+}
+#my_blog .num{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+#my_blog .num>li,#my_blog .comer>li{
+    background: #000;
+    color: #FFFFFF;
+    margin: 5px;
+    float: left;
+    padding: 0 5px;
+}
+
+#my_blog .comer{
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+}
+#my_blog .blog_big .blog_select{
+    display: block;
+}
+#my_blog .num .blog_select{
+    background: orange;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*my_blog结束*/
+/*my_pictures开始*/
+#my_pictures{
+    height: 2000px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*my_pictures结束*/
