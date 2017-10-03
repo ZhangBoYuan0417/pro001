@@ -14,3 +14,16 @@ body {
 a {
     text-decoration: none;
 }
+
+.mask{
+    transition: all 1s;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.6;
+    filter: alpha(opacity:60);
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
