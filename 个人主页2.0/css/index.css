@@ -150,6 +150,9 @@
 }
 /*my_skills结束*/
 /*my_blog开始*/
+#my_blog .wrap >h1{
+    text-align: center;
+}
 #my_blog .blog{
     height: 500px;
     border: 1px solid #000000;
@@ -232,12 +235,57 @@
 
 /*my_blog结束*/
 /*my_pictures开始*/
-#my_pictures{
-    height: 2000px;
+#my_pictures .wrap h1{
+    text-align: center;
+}
+#pictures_wall{
+    width: 100%;
+    height: 613px;
+    position: relative;
+}
+#pictures_wall .img{
+    width: 260px;
+    height: 204px;
+    border: 5px solid #fff;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left:0;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+#pictures_wall .img span {
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0;
+    transition: all 1s ease;
 }
 
+#next, #prev {
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    display: none;
+    margin-top: -90px;
+}
 
+#next {
+    background-image: url(../img/next.png);
+    right: 0;
+    border-radius: 8px 0 0 8px;
+}
 
+#prev {
+    background-image: url(../img/prev.png);
+    left: 0;
+    border-radius: 0 8px 8px 0;
+}
 
 
 
