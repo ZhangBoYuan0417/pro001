@@ -25,6 +25,7 @@
 #navTop li {
     width: 100px;
     height: 82px;
+    transition: all 1s;
 }
 
 .navbar-nav > li > a {
@@ -157,6 +158,10 @@
 
 /*my_skills结束*/
 /*my_blog开始*/
+#my_blog{
+    padding-top: 20px;
+    padding-bottom: 20px; 
+}
 #my_blog .wrap > h1 {
     text-align: center;
 }
@@ -240,6 +245,9 @@
 
 /*my_blog结束*/
 /*my_pictures开始*/
+#my_pictures{
+    padding-top: 20px;
+}
 #my_pictures .wrap h1 {
     text-align: center;
 }
