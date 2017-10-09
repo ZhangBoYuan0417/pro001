@@ -174,7 +174,7 @@
 #my_blog .row > div {
     margin-top: 10px;
     padding: 30px;
-    transition: all 1s;
+    transition: all 1s
 }
 
 #my_blog .row > div:hover {
