@@ -79,6 +79,7 @@ require(["scrollToo"], function (scrollToo) {
 
 
 });
+//开始图片
 $(function () {
     var element = $(".element");
     $(function () {
