@@ -27,3 +27,7 @@ a {
     left: 0;
     top: 0;
 }
+.hiddenScroll{
+    overflow-y: hidden;
+    padding-right:17px;
+}
