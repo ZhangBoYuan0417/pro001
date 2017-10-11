@@ -158,16 +158,17 @@
 
 /*my_skills结束*/
 /*my_blog开始*/
-#my_blog{
+#my_blog {
     padding-top: 20px;
-    padding-bottom: 20px; 
+    padding-bottom: 20px;
 }
+
 #my_blog .wrap > h1 {
     text-align: center;
 }
 
 #my_blog .blog {
-    height: 500px;
+    display: inline-block;
     border: 1px solid #000000;
 }
 
@@ -182,13 +183,12 @@
 }
 
 #my_blog .blog_big {
-    width: 300px;
-    height: 100px;
+    width: 60%;
+    height: 80%;
     position: fixed;
     overflow: hidden;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%);
+    top: 15%;
+    left: 20%;
     display: none;
     transition: display 1s;
 }
@@ -197,22 +197,41 @@
     width: 100%;
     height: 100%;
     display: none;
+    text-align: center;
+    overflow: scroll;
+    background-size: auto 100%;
+    background-position:center;
+    color: #FFFFFF;
+}
+#my_blog .blog_big p{
+    margin:50px;
+}
+#my_blog .blog_big audio {
+    position: fixed;
+    bottom: 0;
+    transform: translate(-50%, -200%);
 }
 
 #my_blog .blog_big1 {
-    background: #fff000;
+    background-image: url("../img/bg/bg-xzq.png");
+
 }
 
 #my_blog .blog_big2 {
-    background: #ff0000;
+    background-image: url("../img/bg/bg-jj.png");
+
+
 }
 
 #my_blog .blog_big3 {
-    background: #00ff00;
+    background-image: url("../img/bg/bg-jay.png");
+
+    color: #000;
 }
 
 #my_blog .blog_big4 {
-    background: #0000ff;
+    background-image: url("../img/bg/bg-wf.png");
+
 }
 
 #my_blog .num {
@@ -243,11 +262,25 @@
     background: orange;
 }
 
+#my_blog .blog span {
+    display: inline-block;
+    background: #164e71;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #FFFFFF;
+    padding: 10px;
+}
+
+#my_blog .blog img {
+    width: 100%;
+}
+
 /*my_blog结束*/
 /*my_pictures开始*/
-#my_pictures{
+#my_pictures {
     padding-top: 20px;
 }
+
 #my_pictures .wrap h1 {
     text-align: center;
 }
@@ -345,12 +378,15 @@
     text-indent: 20px;
     margin-bottom: 20px;
 }
-#register{
+
+#register {
     text-align: center;
 }
-#exampleInputName{
+
+#exampleInputName {
     float: left;
 }
+
 #exampleInputEmail {
     float: right;
 }
@@ -362,17 +398,18 @@
     line-height: 30px;
 }
 
-#contact .bottom{
-    background: rgba(0,0,0,0);
+#contact .bottom {
+    background: rgba(0, 0, 0, 0);
     border: 1px #FFFFFF solid;
     color: #FFFFFF;
     width: 103px;
     height: 46px;
     margin-top: 20px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
     transition: all 0.5s;
 }
-#contact .bottom:hover{
+
+#contact .bottom:hover {
     background: #FFFFFF;
     color: #1b5071;
 }
