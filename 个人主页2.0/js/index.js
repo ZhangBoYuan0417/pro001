@@ -76,7 +76,9 @@ require(["scrollToo"], function (scrollToo) {
             }
         };
     }
-
+    $('#hereMe').on("click",function () {
+        scrollToo(oAboutMe.offsetTop);
+    })
 
 });
 //开始图片
@@ -129,11 +131,14 @@ $(function () {
         $(".mask").css("display", "block");
         $(".blog_big").css("display", "block");
         changImg();
+        $('html,body').addClass("hiddenScroll");
+
 
     });
     $(".mask").on("click", function () {
         $(".mask").css("display", "none");
-        $(".blog_big").css("display", "none")
+        $(".blog_big").css("display", "none");
+        $("html,body").removeClass("hiddenScroll")
     });
     //照片墙
     var ROW = 2, COL = 3, NUM = ROW * COL, BIG_W = 780, BIG_H = 613, THUMB_W = 260, THUMB_H = 204;
