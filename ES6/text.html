@@ -12,11 +12,39 @@
 </ul>
 <script>
     var ali = document.getElementsByTagName("li");
-    for(let i=0;i<ali.length;i++ ){
+    for (let i = 0; i < ali.length; i++) {
         ali[i].onclick = function () {
             console.log(i)
         }
     }
+
+    class User {
+        constructor(aa) {
+            this.aa = aa;
+        }
+
+        say() {
+            console.log(this.aa);
+        }
+
+        static eat() {
+            console.log(22222)
+        }
+    }
+    User.eat();
+    var u = new User('zs');
+    u.say();
+
+    class Son extends User {
+        constructor(aa, bb) {
+            super(aa);
+            this.bb = bb;
+        }
+    }
+    var s = new Son("zss", 'lisi');
+    s.say();
+
+
 </script>
 </body>
 </html>
