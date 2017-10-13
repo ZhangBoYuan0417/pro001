@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>001</li>
+    <li>002</li>
+    <li>003</li>
+</ul>
+<script>
+    var ali = document.getElementsByTagName("li");
+    for(let i=0;i<ali.length;i++ ){
+        ali[i].onclick = function () {
+            console.log(i)
+        }
+    }
+</script>
+</body>
+</html>
