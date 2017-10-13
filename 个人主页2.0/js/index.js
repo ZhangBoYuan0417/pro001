@@ -10,31 +10,48 @@ require(["body_size"], function (bodySize) {
 var oAboutMe = document.getElementById('about_me');
 var oPictures = document.getElementById("my_pictures");
 var oBlog = document.getElementById("my_blog");
+var oSkills = document.getElementById("my_skills");
 var oContact = document.getElementById("contact");
 var oNav = document.getElementById("navTop");
 var oLis = oNav.getElementsByTagName('li');
 $(window).scroll(function () {
-
-    if ($(document).scrollTop() <= oAboutMe.offsetTop-81) {
+    if ($(document).scrollTop() <= oAboutMe.offsetTop) {
+        $("#gotop").css("display","none");
+    }else {
+        $("#gotop").css("display","block");
+    }
+    if ($(document).scrollTop() <= oBlog.offsetTop - 81 && $(document).scrollTop() >= oSkills.offsetTop - 500) {
+        $(".profession-my1").css("width", "100%");
+        $(".profession-my2").css("width", "80%");
+        $(".profession-my3").css("width", "73%");
+        $(".profession-my4").css("width", "70%");
+    }
+    //页面处于开始照片
+    if ($(document).scrollTop() <= oAboutMe.offsetTop - 81) {
         for (var i = 0; i < 5; i++) {
             oLis[i].className = '';
         }
         oLis[0].className = 'active';
-    } else if ($(document).scrollTop() > oAboutMe.offsetTop-81 && $(document).scrollTop() <= oBlog.offsetTop-81) {
+
+//页面处于自我介绍
+    } else if ($(document).scrollTop() > oAboutMe.offsetTop - 81 && $(document).scrollTop() <= oBlog.offsetTop - 81) {
         for (var i = 0; i < 5; i++) {
             oLis[i].className = '';
         }
         oLis[1].className = 'active';
-    } else if ($(document).scrollTop() > oBlog.offsetTop-81 && $(document).scrollTop() <= oPictures.offsetTop-81) {
+        //页面处于音乐
+    } else if ($(document).scrollTop() > oBlog.offsetTop - 81 && $(document).scrollTop() <= oPictures.offsetTop - 81) {
         for (var i = 0; i < 5; i++) {
             oLis[i].className = '';
         }
         oLis[2].className = 'active';
-    } else if ($(document).scrollTop() > oPictures.offsetTop-81 && $(document).scrollTop() <= oContact.offsetTop-81) {
+        //页面处于照片
+    } else if ($(document).scrollTop() > oPictures.offsetTop - 81 && $(document).scrollTop() <= oContact.offsetTop - 81) {
         for (var i = 0; i < 5; i++) {
             oLis[i].className = '';
         }
         oLis[3].className = 'active';
+        //联系
     } else {
         for (var i = 0; i < 5; i++) {
             oLis[i].className = '';
@@ -43,12 +60,16 @@ $(window).scroll(function () {
     }
 });
 require(["scrollToo"], function (scrollToo) {
+    var oGotop = document.getElementById("gotop");
     var oNav = document.getElementById("navTop");
     var oLis = oNav.getElementsByTagName('li');
     var oAboutMe = document.getElementById('about_me');
     var oPictures = document.getElementById("my_pictures");
     var oBlog = document.getElementById("my_blog");
     var oContact = document.getElementById("contact");
+    oGotop.onclick = function () {
+        scrollToo(0);
+    };
     for (var i = 0; i < 5; i++) {
         console.log(oLis[i]);
         oLis[i].index = i;
@@ -76,7 +97,7 @@ require(["scrollToo"], function (scrollToo) {
             }
         };
     }
-    $('#hereMe').on("click",function () {
+    $('#hereMe').on("click", function () {
         scrollToo(oAboutMe.offsetTop);
     })
 
@@ -88,15 +109,19 @@ $(function () {
         element.typed({
             strings: ["I'm Designer.", "I am Creative."],
             typeSpeed: 100,
-            loop: true
+            loop: true,
+
         });
     });
-    var $mask_about = $(".mask_about");
-    $(".my_photo img").hover(function () {
-        $mask_about.css('height', '59px')
-    }, function () {
-        $mask_about.css('height', '0')
-    });
+    // var $mask_about = $(".mask_about");
+    // $(".my_photo img").on("click",function () {
+    //     $mask_about.css('height', '59px');
+    // });
+    // // $(".my_photo img").hover(function () {
+    // //     $mask_about.css('height', '59px')
+    // // }, function () {
+    // //     $mask_about.css('height', '0')
+    // // });
 
     //轮播图
     var nowIndex = 0;
