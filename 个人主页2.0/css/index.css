@@ -86,10 +86,12 @@
 @media (max-width: 768px) {
     #navTop{
         margin-top: 81px;
+        opacity:1;
     }
     #navTop>li{
         width: 200px;
         height: 47px;
+        opacity: 1;
 
     }
     #navTop>li>a{
@@ -97,11 +99,13 @@
         background: #337ab7;
         width: 200px;
         height: 47px;line-height: 20px;
+        opacity:1;
     }
 
     #navTop > .active > a{
         background: #FFFFFF;
         color: #337ab7;
+        opacity:1;
     }
 
     
