@@ -406,7 +406,12 @@
     width: 100%;
 }
 audio{
-    width: 40%;
+    width: 30%;
+}
+@media(max-width: 768px){
+    audio{
+        width: 30%;
+    }
 }
 /*my_blog结束*/
 /*my_pictures开始*/
