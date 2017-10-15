@@ -405,7 +405,9 @@
 #my_blog .blog img {
     width: 100%;
 }
-
+audio{
+    width: 40%;
+}
 /*my_blog结束*/
 /*my_pictures开始*/
 #my_pictures {
