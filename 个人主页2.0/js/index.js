@@ -71,7 +71,7 @@ $(window).scroll(function () {
 //引入stellar.js
 require(["jquery.stellar.min"], function (x) {
     $(function () {
-        $.stellar();
+        $.stellar();//$(window).stellar()
     });
 });
 //滚动条滚动
