@@ -23,8 +23,8 @@
             }
         }
     }
-    var {a} = obj;
-    console.log(a)
+    var {a,a:{b:{c}}} = obj;
+    console.log(a,c)
     //    var {b,a:c,d=666} = obj;
     //    console.log(c,b,d)
     //    var [a,c] ='hello';
