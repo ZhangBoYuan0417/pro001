@@ -6,20 +6,24 @@
 </head>
 <body>
 <script>
-//    var arr = [1, 2, 3];
-//    var [a, b, c] = arr;
-//    console.log(a,b,c);
-//    var a = 10 ,b = 15;
-//    var [b,a] = [a,b];
-//    console.log(a,b);
-//    var obj = {
-//        a:1,
-//        b:2
-//    }
-//    var {b,a:c,d=666} = obj;
-//    console.log(c,b,d)
-//    var [a,c] ='hello';
-//    console.log(a,c)
+    //    var arr = [1, 2, 3];
+    //    var [a, b, c] = arr;
+    //    console.log(a,b,c);
+    //    var a = 10 ,b = 15;
+    //    var [b,a] = [a,b];
+    //    console.log(a,b);
+    //    var obj = {
+    //        a:1,
+    //        b:2
+    //    }
+    //    var {b,a:c,d=666} = obj;
+    //    console.log(c,b,d)
+    //    var [a,c] ='hello';
+    //    console.log(a,c)
+    function fn([a = 666, b = 888]) {
+        console.log(a,b);
+    }
+    fn([]);
 </script>
 </body>
 </html>
