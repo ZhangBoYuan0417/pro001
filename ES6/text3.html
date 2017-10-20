@@ -16,6 +16,15 @@
     //        a:1,
     //        b:2
     //    }
+    var obj = {
+        a:{
+            b:{
+                c:3
+            }
+        }
+    }
+    var {a} = obj;
+    console.log(a)
     //    var {b,a:c,d=666} = obj;
     //    console.log(c,b,d)
     //    var [a,c] ='hello';
