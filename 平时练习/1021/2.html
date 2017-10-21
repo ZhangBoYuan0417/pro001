@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+    <label>请选择你的爱好</label>
+    <input type="checkbox" name="allcheck" id="allcheck">全选/全不选 <br/>
+    <input class="sport" type="checkbox" name="sport">足球
+    <input class="sport" type="checkbox" name="sport">篮球
+    <input class="sport" type="checkbox" name="sport">羽毛球
+    <input class="sport" type="checkbox" name="sport">乒乓球
+</form>
+<script src="../jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        //原生
+//        var all = document.getElementById("allcheck");
+//        var aSports = document.getElementsByClassName("sport")
+//        all.onclick = function () {
+//            for(var i = 0 ; i<aSports.length;i++){
+//                aSports[i].checked = all.checked;
+//            }
+//        }
+        //jq
+        $("#allcheck").on("click",function () {
+            $("#allcheck").nextAll().prop("checked",this.checked)
+        })
+
+    })
+</script>
+</body>
+</html>
