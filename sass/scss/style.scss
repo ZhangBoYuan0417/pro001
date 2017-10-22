@@ -1,4 +1,7 @@
-
+@mixin test($f,$c){
+  font-size: $f;
+  color: $c;
+}
 body{
   color: #000;
   font-size: 12px;
@@ -9,4 +12,5 @@ body{
   -o-transition: all  1s;
   transition: all  1s;
   padding: 10px;
+  @include test(12px,#000)
 }
