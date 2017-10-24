@@ -2,6 +2,7 @@
   font-size: $f;
   color: $c;
 }
+@import "base";
 body{
   color: #000;
   font-size: 12px;
@@ -13,4 +14,10 @@ body{
   transition: all  1s;
   padding: 10px;
   @include test(12px,#000)
+}
+$list : success,fail;
+@each $var in $list {
+  .#{$var}{
+    background: url( $var + ".jpg"  );
+  }
 }
