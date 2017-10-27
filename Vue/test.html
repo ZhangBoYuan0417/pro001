@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model = 'msg'>
+   <span v-text="msg"></span>
+    <span v-html="abc"></span>
+    <button @click = "fn(12345,$event)">click</button>
+    <p :class="aaa">{{aaa}}</p>
+</div>
+<div id="aa">
+    {{msg}}
+</div>
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            msg:'aaaa',
+            abc:"<h1>123544</h1>",
+            aaa:"zby"
+        },
+        methods:{
+            fn:function (x,e) {
+                console.log(x,event.target)
+            }
+        }
+    })
+    function V(obj) {
+        for (var p in obj){
+            if(p == "el"){
+                this['$' + p] = document.querySelector(obj[p]);
+            }else if (p == "data"){
+                this['$' + p] = obj[p];
+                for(var k in obj[p]){
+                    this['$' + k] = obj[p][k];
+                }
+            }
+        }
+    }
+    var v = new V({
+        el:'#aa',
+        data:{
+            msg:'aaa'
+        }
+})
+</script>
+</body>
+</html>
