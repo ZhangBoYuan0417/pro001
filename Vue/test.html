@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .aaa{
+            background: red;
+        }
+    </style>
 </head>
 <body>
 <div id="app">
@@ -10,7 +15,7 @@
    <span v-text="msg"></span>
     <span v-html="abc"></span>
     <button @click = "fn(12345,$event)">click</button>
-    <p :class="aaa">{{aaa}}</p>
+    <p :class="{aaa:isAaa}">{{aaa}}</p>
 </div>
 <div id="aa">
     {{msg}}
@@ -22,7 +27,8 @@
         data:{
             msg:'aaaa',
             abc:"<h1>123544</h1>",
-            aaa:"zby"
+            aaa:"zby",
+            isAaa:true
         },
         methods:{
             fn:function (x,e) {
