@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div {
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <button @click="fn">click</button>
+    <div id="div" :style="[styleA]"></div>
+</div>
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#container",
+        data: {
+           styleA:{
+               display:'block'
+           }
+        },
+        methods: {
+            fn: function () {
+                if (vm.styleA.display == "none"){
+                    vm.styleA.display = "block";
+                }else{
+                    vm.styleA.display = 'none'
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>
