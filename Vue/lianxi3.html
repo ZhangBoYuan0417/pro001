@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container{
+            width: 300px;
+            margin:0 auto;
+        }
+        li {
+            list-style: none;
+            height: 30px;
+            background: green;
+            margin: 10px;
+        }
+        span{
+            float: right;
+        }
+        .green{
+            background: green;
+        }
+        .red{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+<h1>services</h1>
+<ul class="app">
+    <li v-for="n in arr" :class="{red:n.active,green:!n.active}" @click = "n.active =!n.active;">
+        {{n.name}}  <span v-text="n.price"></span>
+    </li>
+</ul>
+<hr/>
+总计：<span>{{count()}}</span></div>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el: ".container",
+        data: {
+            arr: [{name:'aaa',price:232,active:false},
+                {name:'bbb',price:224,active:false},
+                {name:'ccc',price:672,active:false},
+                {name:'ddd',price:664,active:false},
+                {name:'eee',price:552,active:false}]
+        },
+        methods: {
+            change: function (n) {
+//                n.active =!n.active;
+            },
+            count:function () {
+                let  total = 0;
+                this.arr.forEach(function (val,index) {
+                    if (val.active){
+                        total += val.price;
+                    }
+                })
+                return total;
+            }
+        }
+    })
+</script>
+</body>
+</html>
