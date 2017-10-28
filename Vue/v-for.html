@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="val in arr">
+            {{val}}
+        </li>
+    </ul>
+    <template v-for="n in 3">
+        <p>pppppppp</p>
+        <span>ssssssssss</span>
+        <h1>hhhhhhhhh</h1>
+    </template>
+</div>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            arr: [1, 2, 3]
+        }
+    })
+</script>
+</body>
+</html>
