@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .aa {
+            display: none;
+        }
+
+        #div {
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <button @click="fn">click</button>
+    <div id="div" :class="{aa:isAa}">
+
+    </div>
+</div>
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#container",
+        data: {
+            isAa: false
+        },
+        methods: {
+            fn: function () {
+                vm.isAa = !vm.isAa;
+            }
+        }
+    })
+</script>
+</body>
+</html>
