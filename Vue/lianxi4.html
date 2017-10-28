@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  	<style>
+  	*{
+  		padding: 0;
+  		margin: 0;
+  	}
+	li{
+		list-style: none;
+	}
+	.display{
+		display: none;
+	}
+  	.red{
+  		color: red;
+	}
+	#container{
+		width: 300px;
+		margin: 0 auto;
+	}
+  	</style>
+</head>
+<body>
+<div id ="container">
+<input id ="ipt" type ="text" @keyup="up">
+<button @click ="click">click</button>
+<ul>
+	<li v-for ="n in arr" :class="{red:isRed,display:isDisplay}">{{n.name}}</li>
+</ul>
+</div>
+<script src ="vue.js"></script>
+<script>
+var vm = new Vue ({
+		el:"#container",
+		data:{
+			arr : [],
+			isRed : false,
+			isDisplay:false
+		},
+		methods:{
+			click: function() {
+				for(var k in this.arr){
+					k.isDisplay = false
+				}
+				var ipt = document.getElementById('ipt');
+				var obj ={
+						name: ipt.value,
+						isRed : false,
+						isDisplay:false
+				}
+				this.arr.push(obj);
+				var str = [];
+				for (var i = 0; i < this.arr.length; i++) {
+					str.push(JSON.stringify(this.arr[i]));
+				}
+				this.arr.splice(0,this.arr.length);
+				str.sort();
+				for (var i = 0; i < str.length; i++) {
+					this.arr.push(JSON.parse(str[i]))
+				}
+				ipt.value=''
+		 	},
+		 	up:function(){
+		 		var ipt = document.getElementById('ipt');
+
+				for (var i = 0; i < this.arr.length; i++) {
+					// console.log(vm.arr[i])
+		 				if (this.arr[i].name.indexOf(ipt.value) == -1) {
+		 					console.log('go')
+
+		 					 this.arr[i].isDisplay = true;
+		 				}
+		 		}		 		
+		 		// for (var i in this.arr){
+		 		// 	if (i.name.indexOf(ipt.value) == -1) {
+		 		// 		this.isDisplay ='true';
+		 		// 		console.log(i.name);
+		 		// 		console.log(ipt.value);
+		 		// 		console.log(i.name.indexOf(ipt.value) == -1)
+		 		// 	}
+		 		// }
+		 		// 	// aLi[i].indexof(ipt.value) == -1?aLi.splice(i,1):
+		 	}
+
+
+		 	}
+	
+})
+</script>
+</body>
+</html>
