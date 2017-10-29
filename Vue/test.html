@@ -10,7 +10,7 @@
     </style>
 </head>
 <body>
-<div id="app">
+<!-- <div id="app">
     <input type="text" v-model = 'msg'>
    <span v-text="msg"></span>
     <span v-html="abc"></span>
@@ -19,41 +19,42 @@
 </div>
 <div id="aa">
     {{msg}}
-</div>
+</div> -->
 <script src="vue.js"></script>
 <script>
-    var vm = new Vue({
-        el:'#app',
-        data:{
-            msg:'aaaa',
-            abc:"<h1>123544</h1>",
-            aaa:"zby",
-            isAaa:true
-        },
-        methods:{
-            fn:function (x,e) {
-                console.log(x,event.target)
-            }
-        }
-    })
-    function V(obj) {
-        for (var p in obj){
-            if(p == "el"){
-                this['$' + p] = document.querySelector(obj[p]);
-            }else if (p == "data"){
-                this['$' + p] = obj[p];
-                for(var k in obj[p]){
-                    this['$' + k] = obj[p][k];
-                }
-            }
-        }
-    }
-    var v = new V({
-        el:'#aa',
-        data:{
-            msg:'aaa'
-        }
-})
-</script>
+    // var vm = new Vue({
+    //     el:'#app',
+    //     data:{
+    //         msg:'aaaa',
+    //         abc:"<h1>123544</h1>",
+    //         aaa:"zby",
+    //         isAaa:true
+    //     },
+    //     methods:{
+    //         fn:function (x,e) {
+    //             console.log(x,event.target)
+    //         }
+    //     }
+    // })
+    // function V(obj) {
+    //     for (var p in obj){
+    //         if(p == "el"){
+    //             this['$' + p] = document.querySelector(obj[p]);
+    //         }else if (p == "data"){
+    //             this['$' + p] = obj[p];
+    //             for(var k in obj[p]){
+    //                 this['$' + k] = obj[p][k];
+    //             }
+    //         }
+    //     }
+    // }
+    // var v = new V({
+    //     el:'#aa',
+    //     data:{
+    //         msg:'aaa'
+    //     }
+// })
+    var abc = "1";
+    console.log(abc.indexOf("12"))
 </body>
 </html>
