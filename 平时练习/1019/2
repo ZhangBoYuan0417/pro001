@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+    	#aa{
+    		width: 200px;
+    		height: 200px;
+    		display: inline-block;
+    	}
+    </style>
+</head>
+<body>
+<button id="toBig">to big</button>
+<button id="toSmall">to small</button>
+<textarea>id="aa">abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz</textarea> 
+</body>
+</html>

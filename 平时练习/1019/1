@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+    	.focus{
+    		border: red 1px solid;
+    		background: orange;
+    	}
+    </style>
+</head>
+<body>
+<form>
+	<h1>个人基本信息</h1>
+	<div id="name">
+		<label for="nameInput">名称:</label>
+		<input id="nameInput" value="名称" type="text">
+	</div>
+	<div id="passWord">
+		<label for="passWordInput">密码：</label>
+		<input id="passWordInput" value="密码" value="" type="password">
+	</div>
+	<div id="msg">
+		<label for="msgInput">详细信息：</label>
+		<textarea id="msgInput" value="详细信息" rows="2" cols="20"></textarea>
+	</div>
+</form>
+<script src="../jquery-1.12.4.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(":input").on("focus",function(){
+			$(this).addClass("focus");
+			if ($(this).val() == this.defaultValue) {
+				this.value="";
+			}
+		}).blur(function(){
+			$(this).removeClass("focus").val(this.value==""?this.defaultValue:this.value);
+		})
+		
+	});
+</script>
+</body>
+</html>
