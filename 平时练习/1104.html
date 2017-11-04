@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.outer{
+			width: 200px;
+			padding: 200px;
+			background: #ff0000;
+		}
+		.inner{
+			width: 150px;
+			height: 80px;
+			padding-top: 50%;
+			background: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="outer">
+		<div class="inner"></div>
+	</div>
+	<script>
+		var a = 10,b= 15;
+		[a,b] = [b,a];
+		console.log(a,b);
+	</script>
+</body>
+</html>
