@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="container">
+		<input type="text" v-mode = "msg">
+		<button @click = "add">add</button>
+		<ul>
+			<li v-for = ""></li>
+		</ul>
+	</div>
+</body>
+<script src="vue.js"></script>
+<script>
+	var vm = new Vue({
+		el:"#container",
+		data:{
+			msg = "",
+			arr = []
+		},
+		methods:{
+			add(){
+
+			}
+		}
+	})
+</script>
+</html>
