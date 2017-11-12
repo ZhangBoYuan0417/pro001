@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		#big{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -100px;
+			animation: aa 1s linear infinite;
+		}
+		#small1,#small2{
+			width: 600px;
+			height: 600px;
+			position: absolute;
+			left: 370px;
+
+		}
+		#small1{
+			animation: aa 2s linear infinite;
+		
+		}
+		#small2{
+			-webkit-transform-origin: center center;
+			-moz-transform-origin: center center;
+			-ms-transform-origin: center center;
+			-o-transform-origin: center center;
+			transform-origin: center center;
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			transform: rotate(45deg);
+			animation: bb 1s linear infinite;
+
+
+		}
+		@keyframes aa{
+			from{
+				transform: rotate(0);
+			}
+			to{
+				transform: rotate(360deg);
+			}
+		}
+		@keyframes bb{
+			0%{
+				transform: rotate(360deg);
+			}
+			100%{
+				transform: rotate(0);
+			}
+		}
+	</style>
+</head>
+<body>
+	<img src="big.jpg" alt="" id="big">
+	<div id="small1">
+		<img src="small.jpg" alt="">		
+		<img src="small.jpg" alt="" style="position: absolute;top: 0;right: 0">		
+		<img src="small.jpg" alt="" style="position: absolute;bottom: 0;right: 0">		
+		<img src="small.jpg" alt="" style="position: absolute;bottom: 0;left: 0">		
+	</div>
+	<div id="small2">
+		<img src="small.jpg" alt="">		
+		<img src="small.jpg" alt="" style="position: absolute;top: 0;right: 0">		
+		<img src="small.jpg" alt="" style="position: absolute;bottom: 0;right: 0">		
+		<img src="small.jpg" alt="" style="position: absolute;bottom: 0;left: 0">			
+	</div>
+</body>
+</html>

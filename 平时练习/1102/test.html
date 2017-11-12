@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		select{
+			height: 200px;
+			width: 80px;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<select multiple ="multiple" id="left">
+		<option value ="1" selected="selected">001</option>
+		<option value ="2">002</option>
+		<option value ="3">003</option>
+		<option value ="4">004</option>
+		<option value ="5">005</option>
+		<option value ="6">006</option>
+		<option value ="7">007</option>
+	</select>
+	<select multiple ="multiple" id="right">
+		<option value ="8">008</option>
+	</select>
+	<button id="toRight">to right</button>
+	<button id="toLeft">to left</button>
+	<button id="allToRight">all to right</button>
+	<button id="allToLeft">all to left</button>
+	<script type ="text/javascript" src="jquery-1.12.4.js"></script>
+	<script type ="text/javascript">
+		$(function(){
+			$("#toRight").on("click",function(){
+				$("#left option:selected").appendTo($("#right"))
+			});
+			$("#toLeft").on("click",function(){
+				$("#right option:selected").appendTo($("#left"))
+			});
+			$("#allToRight").on("click",function(){
+				$("#left option").appendTo($("#right"))
+			});
+			$("#allToLeft").on("click",function(){
+				$("#right option").appendTo($("#left"))
+			});
+			$("#left").on("dblclick",function(e){
+				if (this != e.target) {
+					$(e.target).appendTo($("#right"))
+				}
+			});
+			$("#right").on("click",function(e){
+				if (this != e.target) {
+					$(e.target).appendTo($("#left"))
+				}
+			})
+		})
+	</script>	
+</body>
+</html>
