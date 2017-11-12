@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.display{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<button @click="fn">click</button>
+		<div :class="{display:isDisplay}" style="width: 200px;height:200px;background: red;"></div>
+	</div>
+	<script src="vue.js"></script>
+	<script>
+		var vm = new Vue({
+			el:"#app",
+			data:{
+				isDisplay:false,
+			},
+			methods:{
+				fn(){
+					this.isDisplay = !this.isDisplay
+				}
+			}
+			
+		})
+	</script>
+</body>
+</html>
