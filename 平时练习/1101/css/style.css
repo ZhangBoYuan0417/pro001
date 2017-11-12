@@ -1,0 +1,55 @@
+/*nav-top*/
+#nav-top
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: 100px;
+}
+#navtop-left
+{
+    height: 100%;
+}
+#navtop-left .image
+{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+
+    cursor: pointer;
+
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+         -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+#navtop-left .menu
+{
+    font-size: 12px;
+
+    text-indent: 3px;
+    letter-spacing: .5px;;
+}
+#navtop-middle{
+	height: 100%;
+}
+#navtop-middle img{
+	width: 73px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+#navtop-right{
+	height: 100%;
+}
+#navtop-right .log-in{
+	float: right;
+	
+
+}
