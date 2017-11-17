@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 编程实现将一个N进制数转换成M进制数 -->
+</body>
+<script>
+	changNum(-10000,2,10);
+	function changNum (a,b,c) {
+		var flag = true;
+		if (a<0) {
+			flag = false;
+			a = a*(-1);
+		}
+		var arr = a.toString().split("");
+		var num = 0;	
+		var arr1 = [];	
+		for (var i = 0; i < arr.length; i++) {
+			if (arr[i]>=b) {
+				console.log('这个数字不是'+b+'进制数');
+				break;
+			};
+			num += arr[i]*Math.pow(b,(arr.length -i-1));		
+		};
+		// console.log(num%c);
+		// num = Math.floor(num/c);
+		// console.log(Math.floor(num/c)>=c)
+		do{
+			arr1.push(num%c);
+			num = Math.floor(num/c);
+			// console.log(num)
+		}while (num >= c);
+		arr1.push(num);
+		console.log(arr1)
+		var res = 0;
+		for (var i = 0; i < arr1.length; i++) {
+			res += arr1[i]*Math.pow(c,i)
+		}
+		console.log(res)
+		if (flag == false) {
+			res = res*(-1)
+		};
+		console.log(res)
+	};
+	// console.log(Math.floor(53/2) )
+	// var arr1;
+	// function change (num,c) {
+	// 	if (Math.floor(num/c) >= c) {
+	// 		num = Math.floor(num/c);
+	// 		arr1.push(num%c);
+	// 		change(num,c); 
+	// 	}else{
+	// 		console.log(arr1)
+	// 		// arr1.push(num);
+	// 		return arr1;
+	// 	}
+	// }
+
+
+</script>
+</html>
