@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 设计一函数，求整数区间[a,b]和[c,d]的交际 -->
+	<script>
+		intersection([3,9],[2,4]);
+		function intersection ([a,b],[c,d]) {
+			var arr = [1,1];
+			if (a>=b ||c>=d) {
+				console.log("请输入正确的区间！");
+			}else {
+				if (a<=c) {
+					arr[0] = c;
+				}else {
+					arr[0] = a;
+				};
+				if (b<=d) {
+					arr[1] = b;
+				}else {
+					arr[1] = d;
+				};
+				if (arr[0] == arr[1]) {
+					console.log(arr[0]);
+				}else if (arr[0] < arr[1]) {
+					console.log(arr);
+				}else if (arr[0] > arr[1]) {
+					console.log('没有区间╮(╯_╰)╭')
+				}
+			}
+		}
+	</script>
+</body>
+</html>
