@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 请填充代码，使mySort()能使传入的参数按照从小到大的顺序显示出来。 -->
+	<script>
+		function mySort(...arr) {
+    	var tags = new Array();//使用数组作为参数存储容器
+		tags = arr.sort(function(a,b){
+			return a-b;
+		});
+        return tags;//返回已经排序的数组
+	}
+	var result = mySort(50,11,16,32,24,99,57,100);//传入参数个数不确定
+	console.log(result);//显示结果
+	</script>
+</body>
+</html>
