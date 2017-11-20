@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 定一个函数test(n,m)  n>1,m>n,返回n到m之间的所有回文数。（回文数是正读和反读相同的数，例如 121，1001,…） -->
+	<script>
+		function test (n,m) {
+			for(var i = n; i<= m ;i++){
+				var str = i.toString();
+				var arr = str.split("");
+				// console.log(arr)
+				var newArr = clone(arr);
+				if (arr == newArr.reverse()) {
+					console.log(i)
+				}
+				
+			}
+		}
+		function clone(arr){
+            var newArr = [];
+            for(var p =0;p<arr.length;p++){
+                
+                    newArr[p] = arr[p];
+                
+            }
+            return newArr;
+       }
+		test(100,102)
+	</script>
+</body>
+</html>
