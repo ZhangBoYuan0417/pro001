@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 有一行单词，空格为单词间的间隔，找出其中最长的单词和最短的单词。 -->
+	<script>
+		var str = "a aa aaa aaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaa bbbbbbbbbbbb";
+		var arr = str.split(" ");
+		console.log(arr);
+		var newArr = arr.sort(function(a,b) {
+			return a.length>b.length
+		})
+		console.log(newArr)
+		console.log(newArr[0]);
+		console.log(newArr[newArr.length-1])
+	</script>
+</body>
+</html>
