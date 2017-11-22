@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 编写一个方法 求一个字符串的字节长度 -->
+	<script>
+		var str = "aaa aaa a a a ^^*&^*&^%^%^";
+		var arr = str.split("");
+		for (n in arr) {
+			if (arr[n] === " ") {
+				arr.splice(n, 1);
+			}
+		}
+		console.log(arr.length)
+	</script>
+</body>
+</html>
