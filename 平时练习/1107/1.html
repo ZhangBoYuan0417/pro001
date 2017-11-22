@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.container{
+			width: 500px;
+			height: 300px;
+		}
+		#nav{
+			
+			overflow: hidden;
+		}
+		#nav li{
+			width: 100px;
+			height: 50px;
+			float: left;
+			list-style: none;
+			border:1px solid #000000;
+			text-align:center;
+			line-height: 50px;
+			background: #aaa;
+		}
+		.content{
+			border:1px solid #000000;
+			width: 500px;
+			height: 200px;
+			background: #777;
+			display: none;
+		}
+		.selected{
+			display: block;
+		}
+		#nav .selected{
+		background: #777;
+
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<ul id="nav">
+		<li class="selected">001</li>
+		<li>002</li>
+		<li>003</li>
+	</ul>
+	<div class="content selected">内容1</div>
+	<div class="content">内容2</div>
+	<div class="content">内容3</div>
+</div>
+	<script src="../1102/jquery-1.12.4.js"></script>
+	<script>
+		$(function(){
+			$("#nav li").hover(function() {
+				nowIndex = $(this).index();
+				$(this).addClass('selected').siblings().removeClass('selected');
+				$(".content").eq(nowIndex).addClass('selected').siblings().removeClass('selected');
+			});
+
+
+
+
+		})
+	</script>
+</body>
+</html>
