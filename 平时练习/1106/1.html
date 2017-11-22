@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 判断一个字符串中出现次数最多的字符，统计这个次数 -->
+	<script>
+		var str = "11122244456";
+		var arr = str.split("");
+		var newArr =[];
+		var obj = {};
+		var res = ['aa',0]
+		for (var i = 0; i < arr.length; i++) {
+			if (newArr.indexOf(arr[i]) == -1) {
+				newArr += arr[i];
+				obj[arr[i]] = 1;
+			}else {
+				obj[arr[i]] += 1;
+			}
+		}
+		for (n in obj) {
+			if (obj[n] > res[1]) {
+				res[0] = n;
+				res[1] = obj[n]
+			}else if (obj[n] == res[1]) {
+				res[0] += ","+n;
+			}
+		}
+		console.log(obj)
+		console.log("出现次数最多的是"+res[0]+",一共出现了"+res[1]+"次")
+	</script>
+</body>
+</html>
