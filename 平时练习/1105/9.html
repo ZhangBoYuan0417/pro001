@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 在一个字符串中找到第一个只出现一次的字符。如输入abaccdeff，则输出b。  -->
+	<script>
+		var str = "abaccdeff";
+		function only(aa) {
+			var arr = str.split("");
+			for(var i = 0;i<arr.length;i++){
+				if(arr.indexOf(arr[i]) == arr.lastIndexOf(arr[i])){
+					console.log(arr[i]);
+					break;
+				}
+			}
+		}
+		only(str)
+	</script>
+</body>
+</html>
