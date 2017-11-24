@@ -1,0 +1,20 @@
+#register{
+	line-height: 30px;
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+input{
+	text-indent: 5px;
+	margin: 10px;
+	font-size: 16px
+}
+#introduce{
+	resize: none;
+	text-indent: 5px;
+	font-size: 16px;
+	padding: 5px
+}
