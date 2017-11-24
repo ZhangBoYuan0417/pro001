@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/Rejister.css">
+</head>
+<body>
+	<form action="" method="post" id="register">
+		<label for="username">用户名：</label>
+		<input type="text" id="username" name="username" required><br/>
+		<label for="password">密码：</label>
+		<input type="password" id="password" name="password" required><br/>
+		<label for="repeatPasswd">重复密码：</label>
+		<input type="password" id="repeatPasswd" name="repeatPasswd" required><br/>
+	    <label for="email">邮箱：</label>
+	    <input type="email" id="email" name="email" required><br/>
+	    性别：<input type="radio" name="sex" value="female">男<input type="radio" name="sex" value="male">女<br/>
+	    <label for="phone">联系电话：</label>
+	    <input type="text" id="phone" name="phone" required><br/>
+	    <label for="introduce" style="vertical-align: top;">个人情况：</label>
+	    <textarea name="introduce" id="introduce" cols="30" rows="10"></textarea><br/>
+	    <label for="chkCode">请输入验证码：</label>
+		<input type="text" name="chkCode" id="chkCode" required>
+		<div id="chkCodePic">
+			<img src="" alt="验证码">
+			<span id="next">看不清换一张</span>
+		</div>
+	    <input type="submit" value="提交">
+	    <input type="reset" value="重置">
+	</form>
+	<script src="js/Register.js">
+	</script>
+</body>
+</html>
