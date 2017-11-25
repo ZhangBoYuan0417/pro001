@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#dialog-box{
+			width: 400px;
+			height: 240px;
+			background: #ccc;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%,-50%);
+			-ms-transform: translate(-50%,-50%);
+			-o-transform: translate(-50%,-50%);
+			transform: translate(-50%,-50%);
+		}
+		#close{
+			float: right;
+		}
+		#title{
+			text-align: center;
+			background: blue;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<button @click = "loginShow = true">登录</button>
+		<button @click = "regShow = true">注册</button>
+		<my-dialog v-show="loginShow">
+			<span slot = 'title' class ="titleName">登录</span>
+			<div slot='content'>name: <input type="text"><br/>
+				password: <input type="password">	
+			</div>
+		</my-dialog>
+		<my-dialog v-show="regShow">
+			<span slot = 'title' class ="titleName">注册</span>
+			<div slot='content'>name: <input type="text"><br/>
+				password: <input type="password">	<br/>
+				Confirm Password: <input type="password">
+			</div>
+		</my-dialog>
+	</div>
+</body>
+<script src="vue.js"></script>
+<script type="text/x-template" id="temp">
+	<div id="dialog-box">
+		<div id="title">
+			<slot name ="title"></slot>
+			<span id="close">[X]</span>
+		</div>
+		<slot name="content"></slot>
+	</div>
+</script>
+<script>
+	new Vue({
+		el:"#app",
+		data:{
+			loginShow:false,
+			regShow:false
+		},
+		components:{
+			myDialog:{
+				template:"#temp"
+			}
+		}
+	})
+</script>
+</html>
