@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var str ='2004年12月31日23时59分59秒';
+		var year =str.slice(0, str.indexOf("年"));
+		var month = str.slice(str.indexOf("年")+1, str.indexOf("月"));
+		var day = str.slice(str.indexOf("月")+1, str.indexOf("日"));
+		var hour = str.slice(str.indexOf("日")+1, str.indexOf("时"));
+		var minute = str.slice(str.indexOf("时")+1, str.indexOf("分"));
+		var second = str.slice(str.indexOf("分")+1, str.indexOf("秒"));
+		var newSecond = second *1+1;
+		console.log(year, month, day, hour, minute, newSecond)
+		var d = new new Date(year, month, day, hour, minute, newSecond);
+		console.log(d)
+
+	</script>
+</body>
+</html>
