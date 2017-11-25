@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		star(6);
+		function star (a) {
+			var arr = [];
+			var k = 1;
+			for (var i = 0; i < a+2 ; i++) {
+				arr[i] = [];
+				for (var j = 0; j < a+2 ; j++) {
+					arr[i][j] = 0;
+				}
+					
+			}	
+			for (var i = 0; i < a; i++) {
+				arr[0][i] = k;
+				k += 1;
+			}
+			for (var i = 1; i < a+1; i++) {
+				arr[i][a+1] = k;
+				k += 1;
+			}
+			for (var i = a-1; i >= 0; i--) {
+				arr[a+1][i] = k;
+				k += 1;
+			}
+			for (var i = a; i > 0; i--) {
+				arr[i][0] = k;
+				k += 1;
+			}
+			var n = a;
+			inStar(k,n,arr)
+			console.log(arr)
+		}
+		
+		function inStar (k,n,arr) {
+			 for (var i = 1; i <= n; i++) {
+			 	arr[1][i] = k;
+			 	k += 1;
+			 }
+			 for (var i = 2; i <=n-1 ; i++) {
+			 	arr[i][n] = k;
+			 	k+=1;
+			 }
+			 for (var i = n; i >= 1; i--) {
+			 	arr[n][i] = k;
+			 	k += 1;
+			 }
+			 // for (var i = n-1; i <= 2; i--) {
+			 // 	arr[n-1][i] = k;
+			 // 	k += 1;
+			 // }
+		}
+
+	</script>
+</body>
+</html>
