@@ -31,9 +31,13 @@ $(window).scroll(function () {
     }
     if ($(document).scrollTop() <= oBlog.offsetTop - 81 && $(document).scrollTop() >= oSkill.offsetTop - 500) {
         $(".profession-my1").css("width", "100%");
-        $(".profession-my2").css("width", "80%");
-        $(".profession-my3").css("width", "73%");
-        $(".profession-my4").css("width", "70%");
+        $(".profession-my2").css("width", "86%");
+        $(".profession-my3").css("width", "83%");
+        $(".profession-my4").css("width", "87%");
+        $(".profession-my5").css("width", "89%");
+        $(".profession-my6").css("width", "81%");
+        $(".profession-my7").css("width", "88%");
+        $(".profession-my8").css("width", "79%");
     }
     //页面处于开始照片
     if ($(document).scrollTop() <= oAboutMe.offsetTop - 81) {
