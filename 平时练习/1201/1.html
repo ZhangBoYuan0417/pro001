@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function fn(a,time,wait){
+			
+
+				var timeOut = setTimeout(function () {
+					a(123);
+				},wait);
+
+				window.setInterval(timeOut,0)
+			}
+		
+		const repeatFn = fn(alert,4,3000);
+		// repeatFn();
+	</script>
+</body>
+</html>
