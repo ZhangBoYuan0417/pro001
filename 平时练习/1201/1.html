@@ -6,18 +6,22 @@
 </head>
 <body>
 	<script>
-		function fn(a,time,wait){
-			
-
-				var timeOut = setTimeout(function () {
-					a(123);
-				},wait);
-
-				window.setInterval(timeOut,0)
+		// 完成rejetRepeatedChars函数，从给定的字符串中剔除连续字符，只保留一个，比如：aaabbbcdc，返回abcdc;
+		var a = "aaabbbcdc";
+		function rejetRepeatedChars(str) {
+			var arr = str.split('');
+			var resArr = [];
+			for(var i = 0; i < arr.length - 1; i++){
+				if (arr[i] == arr[i+1]) {
+					// console.log(arr[i])
+				}else{
+					resArr.push(arr[i])
+				}
 			}
-		
-		const repeatFn = fn(alert,4,3000);
-		// repeatFn();
+			resArr.push(arr[arr.length-1]);
+			console.log(resArr.toString())
+		}
+		rejetRepeatedChars(a)
 	</script>
 </body>
 </html>
