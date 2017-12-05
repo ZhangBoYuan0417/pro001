@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var sigintCount = 0;  
+var productArray = [];  
+var productArrayLen = 0;  
+var productLock = false;  
+var PRODUCT_ARRAY_THRESHOLD = 10;  
+  
+var producerTimer = setInterval(function () {  
+        if (!productLock) {  
+            if (!productLock) {  
+                productLock = true;  
+  
+                if (productArrayLen < PRODUCT_ARRAY_THRESHOLD) {  
+                    productArray.push('product');  
+                    productArrayLen++;  
+                    console.log('product:' + productArrayLen + '   producer.push');  
+                } else {  
+                    console.log('product:' + productArrayLen + '   producer.idle');  
+                }  
+  
+                productLock = false;  
+            }  
+        }  
+    }, 500);  
+  
+var consumerTimer = setInterval(function () {  
+        if (!productLock) {  
+            if (!productLock) {  
+                productLock = true;  
+  
+                if (productArrayLen) {  
+                    var product = productArray.shift();  
+                    productArrayLen--;  
+                    console.log('product:' + productArrayLen + '   consumer.pop');  
+                } else {  
+                    console.log('product:' + productArrayLen + '   consumer.idle');  
+                }  
+  
+                productLock = false;  
+            }  
+        }  
+    }, 1000);  
+  
+function readme() {  
+    console.log('==================================================');  
+    console.log('Auther  : shishuo');  
+    console.log('Date    : 2014-07-05');  
+    console.log('Blog    : https://blog.ibaoger.com/');  
+    console.log('Email   : shishuo365@126.com');  
+    console.log('License : GNU GPL v3');  
+    console.log('==================================================');  
+}  
+  
+readme();  
+  
+process.stdin.resume();  
+process.on('SIGINT', function () {  
+    sigintCount++;  
+    if (sigintCount > 1) {  
+        process.exit();  
+    } else {  
+        clearInterval(producerTimer);  
+        clearInterval(consumerTimer);  
+        console.log('Press two times Control-C to exit.');  
+    }  
+});  
+  
+process.on('exit', function () {  
+    console.log('Thank you for use. Bye bye~');  
+});  
+	</script>
+</body>
+</html>
