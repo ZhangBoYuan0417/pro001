@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+ 	<script language="javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+    	function ale(){
+    		var a = $("#test").val();
+    		alert(a);
+    	}
+    	
+    	
+    	function start(){
+    	
+    	
+    		$("#worksay").html(":Working...");
+    		$("#cussay").html(":Saling...");
+    		var worktime =parseInt( Math.random()*10+1);
+    		var saletime = parseInt( Math.random()*10+1);
+    		
+    		$("#wtime").val(worktime);
+    		$("#stime").val(saletime);
+    		
+			$("#wt").val(worktime);
+			$("#wt1").html(worktime);
+   			var num = 0;
+   			if(parseInt($("#worknum").val())!=0){
+   				num = parseInt($("#worknum").val())
+   			}
+    		var salnum =0;
+    		if(parseInt($("#salenum").val())!=0){
+   				salnum = parseInt($("#salenum").val());
+   			}
+    		$("#worksay").html(":Working...");
+    		$("#num").html("生产者每"+worktime+"秒制造一瓶可乐，已生产："+num+"个");
+    		$("#salnum").html("消费者每"+saletime+"秒购买一瓶可乐，已购买"+salnum+"个");
+			
+			startWork();
+			working();
+			startSale();
+			saling();
+			
+		}
+		var m =1;
+		function working(){
+		var wt = $("#wtime").val();
+			var wing = setInterval(function(){
+				var ck = $("#ck").val();
+				if(ck==5){
+					$("#working").html("");
+				}else{
+					$("#working").html("   生产中："+m+"/"+wt);
+				}
+				if(m==wt){
+					m=1;
+				}else{
+					m++;
+				}
+			},1000);
+			$("#wing").val(wing);
+		}
+		
+		var n =1;
+		function saling(){
+		var st = $("#stime").val();
+			var sing =setInterval(function(){
+				var lent = $("img[name=coca]").length;
+				if(lent==0){
+					$("#saling").html("");
+				}else{
+				
+					$("#saling").html("   消费等候中："+n+"/"+st);
+				}
+				if(n==st){
+					n=1;
+				}else{
+					n++;
+				}
+			},1000);
+			$("#sing").val(sing);
+		}
+		
+		function startWork(){
+		var worktime = $("#wtime").val();
+			var work = setInterval(function(){
+					
+					$("#worksay").html(":Working...");
+					var ck =parseInt($("#cknum").val());
+					var num = parseInt($("#worknum").val());
+					var lent = $("img[name=coca]").length;
+					if(lent!=6){
+						num++;
+						var tdindex = lent+1;
+						$("#td"+tdindex).html("<img name='coca' alt='worker' src='img/goods.jpg'>");
+						$("#worksay").html(":Working...");
+						$("#num").html("生产者每"+worktime+"秒制造一瓶可乐，已生产："+num+"个");
+						$("#worknum").val(num)
+					}else if(ck<5){
+						$("#worksay").html(":Working...");
+						ck++;
+						num++;
+						$("#cknum").val(ck);
+						$("#ck").html(ck);
+						$("#worknum").val(num);
+						$("#num").html("生产者每"+worktime+"秒制造一瓶可乐，已生产："+num+"个");
+					}else{
+						$("#worksay").html(":Resting...");
+						var wing =$("#wing").val();
+						clearInterval(wing);
+						$("#working").html("");
+					}
+				}, worktime*1000);
+				$("#w").val(work);
+		}
+		
+		function startSale(){
+		var saletime = $("#stime").val();
+			var sale = setInterval(function(){
+				var ck =parseInt($("#cknum").val());
+				var salnum = parseInt($("#salenum").val());
+				
+				$("#salnum").html("消费者每"+saletime+"秒购买一瓶可乐，已购买"+salnum+"个");
+				var lent = $("img[name=coca]").length;
+				if(ck>0){
+					ck--;
+					salnum++;
+					$("#cknum").val(ck);
+					$("#cussay").html(":Saling...");
+					$("#ck").html(ck);
+					$("#salenum").val(salnum);
+					$("#salnum").html("消费者每"+saletime+"秒购买一瓶可乐，已购买"+salnum+"个");
+				}else if(lent!=0){
+					salnum++;
+					$("#salnum").html("消费者每"+saletime+"秒购买一瓶可乐，已购买"+salnum+"个");
+					$("img[name=coca]:last").remove();
+					$("#cussay").html(":Saling...");
+					$("#cus").attr("src","img/saling.jpg");
+					$("#salenum").val(salnum);
+				}else{
+					$("#cussay").html(":Waiting...");
+					$("#cus").attr("src","img/waiting.jpg");
+				}
+			}, saletime*1000);
+			$("#s").val(sale);
+		}
+		
+		function stop(){
+			$("#worksay").html("");
+    		$("#cussay").html("");
+			var work =$("#w").val();
+			var sale =$("#s").val();
+			var wing =$("#wing").val();
+			var sing =$("#sing").val();
+			clearInterval(work);
+			clearInterval(sale);
+			clearInterval(wing);
+			clearInterval(sing);
+		}
+		function stopwork(){
+			$("#worksay").html(":Stop Working...");
+    			
+			var work =$("#w").val();
+			var sale =$("#s").val();
+			var wing =$("#wing").val();
+			clearInterval(work);
+			clearInterval(wing);
+			$("#working").html("");
+			
+		}
+		function contiuework(){
+			$("#worksay").html(":Working...");
+			startWork();
+			m=1;
+			working();
+		}
+		function stopsale(){
+			$("#cussay").html(":Stop Saling...");
+    			
+			var work =$("#w").val();
+			var sale =$("#s").val();
+			var sing =$("#sing").val();
+			clearInterval(sale);
+			clearInterval(sing);
+			$("#saling").html("");
+			
+		}
+		function contiuesale(){
+			$("#cussay").html(":Saling...");
+			startSale();
+			n=1;
+			saling();
+		}
+    	
+    </script>
+
+  </head>
+  
+  <body>
+  	<input type="hidden" id="worknum" value="0"/>
+	<input type="hidden" id="salenum" value="0"/>
+	<input type="hidden" id="wtime" value="">
+	<input type="hidden" id="stime" value="">
+	<input type="hidden" id="cknum" value="0">
+  	<input type="hidden" id="w" value="">
+  	<input type="hidden" id="s" value="">
+  	<input type="hidden" id="wing" value="">
+  	<input type="hidden" id="sing" value="">
+
+</div> 
+</div> 
+	仓库数量：<label id="ck">0</label>
+    <img alt="worker" src="img/worker.jpg">Worker<label id="worksay"></label>&nbsp;&nbsp;&nbsp;&nbsp;<label id="num"></label>
+	<label id="working"></label>
+	<table border="1" bordercolor="blue">
+		<tr>
+			<td id="td1" width="225px" height="230px"><img name='coca' alt='worker' src='img/goods.jpg'></td>
+			<td id="td2" width="225px" height="230px"><img name='coca' alt='worker' src='img/goods.jpg'></td>
+			<td id="td3" width="225px" height="230px"></td>
+			<td id="td4" width="225px" height="230px"></td>
+			<td id="td5" width="225px" height="230px"></td>
+			<td id="td6" width="225px" height="230px"></td>
+		</tr>
+	</table>
+	<img id="cus" src="img/saling.jpg">Customer<lable id="cussay"></lable>&nbsp;&nbsp;&nbsp;&nbsp;<label id="salnum"></label>   
+  	<label id="saling"></label>
+  	<br>
+  	<input type="button" id="start" value="开始" onclick="start();"  />
+  	<input type="button" id="" value="停止" onclick="stop();"  />
+	<input type="button" id="" value="停止生产" onclick="stopwork();"  />
+	<input type="button" id="" value="继续生产" onclick="contiuework();"  />
+	<input type="button" id="" value="停止消费" onclick="stopsale();"  />
+	<input type="button" id="" value="继续消费" onclick="contiuesale();"  /><br>
+  </body>
+</html>
+

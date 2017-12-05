@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>生产者消费者</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		ul{
+			overflow:hidden;
+		}
+		li{
+			list-style: none;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		仓库数量：{{arr.length}}个 <br>
+		<div id="worker">
+			生产者：
+			<img :src=wh alt="" style="height: 200px">
+			生产速度：{{produce*0.5}} 秒 {{isProduce}}
+		</div>
+		<button id="start" @click="start">开始生产</button>
+		<button id="end" @click="end">开始消费</button><br>
+		累计生产：{{add}}个，
+		累计消费：{{buy}}个
+		<ul>
+			<li v-for="k in arr">
+				<img src="img/goods.jpg" alt="" style="height: 100px">
+			</li>
+		</ul>
+		<div id="sale">
+			消费者:
+			<img :src=cy alt="" style="height: 200px">
+			消费速度：{{consume*0.5}} 秒 {{isConsume}} 
+		</div>
+	</div>
+	<script src="js/vue.js"></script>
+	<script>
+		var vm = new Vue({
+			el:"#app",
+			data: {
+				arr : [1,1],
+				produce : Math.ceil(Math.random()*10),
+				consume : Math.ceil(Math.random()*10),
+				add : 2,
+				buy : 0,
+				isProduce : "还没开始生产",
+				isConsume : "还没开始消费",
+				wh:"img/wuhao.jpg",
+				cy:"img/chenyang_xiao.JPG"
+			},
+			methods:{
+				start(){
+					this.isProduce = "已经开始生产";
+					this.wh="img/wuhao.jpg";
+					var timer = setInterval(function () {				
+						this.arr.push(1)
+						if (this.arr.length>=7) {
+							clearInterval(timer);
+							this.isProduce = "已经结束生产";
+							this.wh="img/wuhao_sleep.JPG"
+						}
+						this.add++;
+					}.bind(this),500*this.produce);	
+				},
+				end(){
+						this.isConsume = "已经开始消费";
+					this.cy="img/chenyang_xiao.JPG";
+					var timer = setInterval(function () {
+						this.arr.pop();
+						if (this.arr.length == 0) {
+							clearInterval(timer);
+							this.isConsume = "已经结束消费";
+							this.cy="img/chenyang_ku.jpg"
+						}
+						this.buy++;
+					}.bind(this),500*this.consume)
+				}
+			}
+		})
+	</script>
+</body>
+</html>
