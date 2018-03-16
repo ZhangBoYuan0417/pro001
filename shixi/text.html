@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <select id="aa" onchange="change(this.value)">
+        <option value="place">地名</option>
+        <option value="linkid">linkid</option>
+        <option value="lnglat">经纬度</option>
+    </select>
+    <input type="text" id="cc" placeholder="城市名">
+    <input type="text" id="dd" placeholder="地点">
+    <input type="button" value="查询" id="btn">    
+</body>
+<script>
+    var aa = document.getElementById('aa');
+    var cc = document.getElementById('cc');
+    var dd = document.getElementById('dd');
+    var btn = document.getElementById('btn');
+    // var proxy = new Proxy(aa,{
+    //     set(target,prop,val){
+    //         console.log('123')
+    //     }
+    // })
+    function change(num){
+        cc.value = "";
+        dd.value = ""
+        switch (num) {
+            case 'place':
+                cc.placeholder = "城市名";
+                dd.placeholder = "地点";
+                dd.hidden = false;
+                break;
+            case 'linkid':
+                cc.placeholder = "linkid";
+                dd.hidden = true;
+                break;
+            case 'lnglat':
+                cc.placeholder = "经度（lng）";
+                dd.placeholder = "纬度（lat）";
+                dd.hidden = false;
+                break;
+        }
+    };
+    var cVal = cc.value
+    var dVal = dd.value
+    btn.onclick = function click(){
+        console.log(cc.value)
+        console.log(dd.value)
+        let msg = {};
+        msg.type = aa.value;
+        msg.left = cc.value;
+        if(dd.value){
+            msg.right = dd.value;
+        }
+        console.log(msg)
+    }
+//  var obj = {
+
+//    };
+
+//     访问器属性
+//    Object.defineProperty(obj,'name',{
+//        set:function(val){
+//            document.getElementById('ipt').value=val;
+//        }
+//    })
+//     var temperature = undefined;
+//     Object.defineProperty(obj, 'temperature', {
+//         get: function () {
+//             return temperature;
+//         },
+//         set: function (value) {
+//             temperature = value;
+//         }
+//     });  
+
+</script>
+</html>
