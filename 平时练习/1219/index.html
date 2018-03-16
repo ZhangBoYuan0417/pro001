@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<ul id="res">
+	
+</ul>
+<script src="../../jQuery/jquery-3.2.1.min.js"></script>
+<script>
+	$(function () {
+		$.get('homework.json',{},function(data){
+			console.log(data);
+		},'json');
+		$.get('homework.json',{},function(data){
+			data.sort(compare('long'));
+			console.log(data)
+			var time = 0;
+			var timeDalay = 0;
+			for (var i = 0; i < data.length; i++) {
+				if (time < data[i].start) {
+					time = data[i].start;
+					timeDalay = 0;
+				}else if(time > data[i].start){
+					timeDalay = time - data[i].start; 
+					
+				}
+				$('#res').append('<li>第'+time+'秒执行第'+data[i].num+'个作业,长达'+data[i].long+'秒</li>');
+				time =time + data[i].long + timeDalay;
+			}
+			function compare(property){
+				return function (a,b){
+					var v1 = a[property];
+					var v2 = b[property];
+					return v1 - v2;
+					}
+			}
+		},'json');
+
+
+		
+	});
+</script>
+</body>
+</html>

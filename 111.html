@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+      var obj= {a:{b:{c:1}}};
+      function find(str){
+        var a = str.split('.');
+        // console.log(a);
+        for(var i=0; i<a.length; i++){
+          if(obj[a[i]]){
+            obj = obj[a[i]];
+            // console.log(obj);
+          }else{
+            return undefined;
+          }
+        }
+        return obj;
+      }
+    console.log(find('a.b.c'));//1
+    console.log(find('a.d.c'));//undefined
+  </script>
+</body>
+</html>
